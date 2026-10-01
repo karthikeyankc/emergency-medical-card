@@ -3,7 +3,7 @@
  * Page shell. The head carries what search engines and answer engines
  * need: a plain title and description, Open Graph and Twitter cards, a
  * canonical URL when SITE_URL is set at build time, the web manifest,
- * and any JSON-LD the page passes in.
+ * Google Search Console's ownership tag, and any JSON-LD the page passes in.
  */
 import '../styles/app.css';
 import { csp } from '../headers.js';
@@ -24,6 +24,7 @@ const image = `${site}${href('/og.png')}`;
     <meta name="theme-color" content="#0E1011" media="(prefers-color-scheme: dark)" />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="google-site-verification" content="bhMNUKqkwsTPFwt1gf5X13YTyeE9k302C3XOQJzXQSA" />
     {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
     {canonical && <link rel="canonical" href={canonical} />}
     <link rel="icon" href={href('/favicon.svg')} type="image/svg+xml" />
