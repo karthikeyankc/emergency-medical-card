@@ -10,7 +10,7 @@ import { csp } from '../headers.js';
 import { href } from '../paths.js';
 const { title, description, path = '/', jsonLd = [], noindex = false } = Astro.props;
 const site = import.meta.env.SITE_URL || (Astro.site ? String(Astro.site).replace(/\/$/, '') : '');
-const canonical = site ? `${site}${href(path)}` : null;
+const canonical = site && !noindex ? `${site}${href(path)}` : null;
 const image = `${site}${href('/og.png')}`;
 ---
 <!doctype html>

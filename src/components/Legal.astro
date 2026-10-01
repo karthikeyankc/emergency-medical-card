@@ -1,5 +1,5 @@
 ---
-/** Shared shell for the privacy and terms pages. */
+/** Shared shell for the privacy, terms, and not-found pages. `updated` is left out on the not-found page. */
 import Footer from './Footer.astro';
 import ui from '../data/i18n/ui/en.json';
 import { href } from '../paths.js';
@@ -15,7 +15,7 @@ const { heading, updated } = Astro.props;
   <main class="flex-1 px-6 py-10">
     <article class="mx-auto max-w-prose space-y-5 legal">
       <h1 class="text-3xl font-bold tracking-tight">{heading}</h1>
-      <p class="text-(--t3) text-sm">{ui.legal.updated} {updated}</p>
+      {updated && <p class="text-(--t3) text-sm">{ui.legal.updated} {updated}</p>}
       <slot />
       <p><a href={href('/')}>{ui.legal.back}</a></p>
     </article>

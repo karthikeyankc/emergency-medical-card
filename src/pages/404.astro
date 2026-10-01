@@ -1,0 +1,12 @@
+---
+/** Served for any address the site doesn't have, so the host answers it with a 404 instead of the editor. */
+import Base from '../layouts/Base.astro';
+import Legal from '../components/Legal.astro';
+const title = 'Page not found · Emergency Medical Card';
+const description = 'There is no page at this address.';
+---
+<Base title={title} description={description} noindex>
+  <Legal heading="Page not found">
+    <p>If you typed the address, check it's correct. If you pasted it, check you copied all of it.</p>
+  </Legal>
+</Base>

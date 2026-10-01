@@ -296,7 +296,7 @@ The lock screen image is the `phone-lockscreen` format rendered through the `pho
 
 ## Stack
 
-- Astro with `output: 'static'` and `build.format: 'file'`, so the privacy and terms pages are served at `/privacy` and `/terms`, the URLs the canonical tags name. Vanilla JavaScript as ES modules in `<script>` blocks and `src/scripts/`. The pages are `/`, `/privacy`, and `/terms`.
+- Astro with `output: 'static'` and `build.format: 'file'`, so the privacy and terms pages are served at `/privacy` and `/terms`, the URLs the canonical tags name. Vanilla JavaScript as ES modules in `<script>` blocks and `src/scripts/`. The pages are `/`, `/privacy`, and `/terms`, plus `404.html`, which the host serves for any other address with a 404 status. Without it, Cloudflare Pages treats the site as a single-page app and answers every unknown address with the editor.
 - Tailwind CSS 4 through `@tailwindcss/vite`. Inter for the editor through `@fontsource-variable/inter`.
 - `harfbuzzjs` for shaping and outlines. `jsPDF` with `svg2pdf.js` for PDF. Canvas for PNG. A hand-written `pHYs` chunk writer, about twenty lines. `qrcode-generator` for the optional QR code. `svg-path-bbox` at build time to centre icons on their drawn shape.
 - Lucide through `@lucide/astro` in the editor. `scripts/build-icons.mjs` copies the icons the card uses into `src/card/icons.js` as data, so the renderer has no dependency.
@@ -307,7 +307,7 @@ The lock screen image is the `phone-lockscreen` format rendered through the `pho
 src/
   headers.js    CSP and response headers, used by Base.astro and written to dist/_headers
   paths.js      Links inside the site, carrying the base path from BASE_PATH
-  pages/        index.astro, privacy.astro, terms.astro
+  pages/        index.astro, privacy.astro, terms.astro, 404.astro
   layouts/      Base.astro (head: CSP, SEO tags, JSON-LD, manifest)
   components/   LocalisedField, Callout, Footer, Legal
   scripts/      Client JavaScript. store, form, fields, dropdown, tips, icon, customfont, preview, exports, fonts,
