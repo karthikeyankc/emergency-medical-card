@@ -47,7 +47,7 @@ for (const [str, style, colour, gap] of [
 }
 
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect width="1200" height="630" fill="#F3F0E9"/><!-- a warm grey on the yellow strip's hue, so the white card stands out -->
   <g transform="translate(72 96) scale(1.6)">${logo}</g>
   ${blocks.join('')}
   <g transform="translate(600 140) rotate(-4 260 160) scale(6.2)">

@@ -2,7 +2,7 @@
 
 <h1 align="center">Emergency Medical Card</h1>
 
-<p align="center">A free medical ID card maker. It makes a wallet card that tells people how to help you when you can't speak for yourself.<br>Nothing you type leaves your browser.</p>
+<p align="center">A free medical ID card maker. It makes a wallet card that tells people how to help you when you can't speak for yourself. Nothing you type leaves your browser.</p>
 
 <p align="center"><img src="public/og.png" alt="An example emergency medical card sized for a wallet, with a red band for the name, a yellow strip naming the condition, and green DO and red DO NOT lists" width="720"></p>
 
