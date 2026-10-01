@@ -6,14 +6,15 @@
  */
 import ui from '../data/i18n/ui/en.json';
 import { Stethoscope, ShieldCheck, Scale } from '@lucide/astro';
+import { href } from '../paths.js';
 const t = ui.footer;
 const repo = 'https://github.com/KarthikeyanKC/emergency-medical-card';
 ---
 <footer class="site-footer">
   <div class="max-w-[1400px] mx-auto px-6 py-10 flex flex-col items-center gap-6 text-center">
     <div class="space-y-3 max-w-[60ch]">
-      <a href="/" class="inline-flex items-center gap-3 no-underline">
-        <img src="/logo.svg" alt="" width="40" height="25" />
+      <a href={href('/')} class="inline-flex items-center gap-3 no-underline">
+        <img src={href('/logo.svg')} alt="" width="40" height="25" />
         <span class="font-bold text-(--t1)">{ui.title}</span>
       </a>
       <p>{t.about}</p>
@@ -21,8 +22,8 @@ const repo = 'https://github.com/KarthikeyanKC/emergency-medical-card';
     </div>
     <nav aria-label="Footer">
       <ul class="footer-links">
-        <li><a href="/privacy">{t.privacyLink}</a></li>
-        <li><a href="/terms">{t.termsLink}</a></li>
+        <li><a href={href('/privacy')}>{t.privacyLink}</a></li>
+        <li><a href={href('/terms')}>{t.termsLink}</a></li>
         <li><a href={repo} rel="noopener noreferrer" target="_blank">{t.source}</a></li>
         <li><a href={`${repo}/issues`} rel="noopener noreferrer" target="_blank">{t.report}</a></li>
       </ul>

@@ -17,10 +17,13 @@ export const csp = [
   "form-action 'self'",
 ].join('; ');
 
-/** The dist/_headers file. Hashed assets never change, so browsers keep them for a year. */
-export function headersFile() {
+/**
+ * The dist/_headers file. Hashed assets never change, so browsers keep them for a year.
+ * `base` is the base path, empty at the root, as the file's paths start at the host's root.
+ */
+export function headersFile(base = '') {
   return [
-    '/*',
+    `${base}/*`,
     `  Content-Security-Policy: ${csp}; frame-ancestors 'none'`,
     '  X-Content-Type-Options: nosniff',
     '  X-Frame-Options: DENY',
@@ -28,7 +31,7 @@ export function headersFile() {
     '  Cross-Origin-Opener-Policy: same-origin',
     '  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()',
     '',
-    '/_astro/*',
+    `${base}/_astro/*`,
     '  Cache-Control: public, max-age=31536000, immutable',
     '',
   ].join('\n');

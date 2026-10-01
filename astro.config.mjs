@@ -7,6 +7,7 @@ import { headersFile } from './src/headers.js';
 const unused = fileURLToPath(new URL('./src/export/unused.js', import.meta.url));
 
 const site = (process.env.SITE_URL || '').replace(/\/$/, '');
+const base = (process.env.BASE_PATH || '').replace(/\/$/, '');
 const PAGES = ['/', '/privacy', '/terms'];
 
 /**
@@ -19,15 +20,15 @@ const headers = {
   name: 'headers',
   hooks: {
     'astro:build:done': ({ dir, logger }) => {
-      writeFileSync(new URL('_headers', dir), headersFile());
+      writeFileSync(new URL('_headers', dir), headersFile(base));
       if (!site) {
         logger.warn('SITE_URL is not set, so there is no sitemap, canonical URL, or absolute social image. Set it for a production build.');
         return;
       }
-      const urls = PAGES.map((path) => `  <url><loc>${site}${path}</loc></url>`).join('\n');
+      const urls = PAGES.map((path) => `  <url><loc>${site}${base}${path}</loc></url>`).join('\n');
       writeFileSync(new URL('sitemap.xml', dir), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
       const robots = readFileSync(new URL('robots.txt', dir), 'utf8').trimEnd();
-      writeFileSync(new URL('robots.txt', dir), `${robots}\n\nSitemap: ${site}/sitemap.xml\n`);
+      writeFileSync(new URL('robots.txt', dir), `${robots}\n\nSitemap: ${site}${base}/sitemap.xml\n`);
     },
   },
 };
@@ -37,7 +38,7 @@ export default defineConfig({
   // privacy.html and terms.html, so a host serves them at /privacy and /terms, the URLs the canonical tags name.
   build: { inlineStylesheets: 'never', format: 'file' },
   site: process.env.SITE_URL || undefined,
-  base: process.env.BASE_PATH || '/',
+  base: base || '/',
   integrations: [headers],
   vite: {
     plugins: [tailwindcss()],

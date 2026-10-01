@@ -12,6 +12,7 @@ import { formatNames } from '../card/formats/index.js';
 import Callout from '../components/Callout.astro';
 import Footer from '../components/Footer.astro';
 import symbols from '../data/symbols.json';
+import { href } from '../paths.js';
 const t = ui;
 const f = ui.fields;
 const regionName = new Intl.DisplayNames(['en'], { type: 'region' });
@@ -30,7 +31,7 @@ const numberOf = (code) => { const n = numbers[code]; return n ? ` · ${n.genera
 // Structured data as one linked graph: the site, its author, the tool, and this page with its questions.
 // Search engines need absolute URLs, so they appear only when SITE_URL is set at build time.
 const site = (import.meta.env.SITE_URL || (Astro.site ? String(Astro.site) : '')).replace(/\/$/, '');
-const abs = (path) => (site ? `${site}${path}` : path);
+const abs = (path) => `${site}${href(path)}`;
 const repo = 'https://github.com/KarthikeyanKC/emergency-medical-card';
 const structuredData = {
   '@context': 'https://schema.org',
@@ -102,7 +103,7 @@ const structuredData = {
   <div class="min-h-full flex flex-col">
     <header class="site-header">
       <div class="max-w-[1400px] mx-auto px-4 py-3 sm:px-6 sm:py-4 grid grid-cols-[auto_1fr_auto] items-center gap-x-3 sm:gap-x-4">
-        <img src="/logo.svg" alt="" width="44" height="28" class="w-9 sm:w-11 h-auto sm:row-span-2" />
+        <img src={href('/logo.svg')} alt="" width="44" height="28" class="w-9 sm:w-11 h-auto sm:row-span-2" />
         <h1 class="text-lg sm:text-xl font-bold tracking-tight">{t.title}</h1>
         <button type="button" class="btn btn-secondary btn-icon sm:row-span-2" id="theme-toggle" aria-label={t.themeToDark} data-label-dark={t.themeToDark} data-label-light={t.themeToLight}><Moon class="theme-moon" aria-hidden="true" /><Sun class="theme-sun" aria-hidden="true" /></button>
         <p class="col-span-3 sm:col-span-1 sm:col-start-2 mt-1 sm:mt-0 text-sm sm:text-base text-(--t3)">{t.intro} <button type="button" class="tip tip-below align-middle max-sm:hidden" data-tip={t.privacyLine} aria-label={t.privacyLine}><CircleHelp aria-hidden="true" /></button></p>

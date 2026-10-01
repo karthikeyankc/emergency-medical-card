@@ -306,6 +306,7 @@ The lock screen image is the `phone-lockscreen` format rendered through the `pho
 ```
 src/
   headers.js    CSP and response headers, used by Base.astro and written to dist/_headers
+  paths.js      Links inside the site, carrying the base path from BASE_PATH
   pages/        index.astro, privacy.astro, terms.astro
   layouts/      Base.astro (head: CSP, SEO tags, JSON-LD, manifest)
   components/   LocalisedField, Callout, Footer, Legal

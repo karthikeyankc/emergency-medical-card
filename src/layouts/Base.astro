@@ -7,10 +7,11 @@
  */
 import '../styles/app.css';
 import { csp } from '../headers.js';
+import { href } from '../paths.js';
 const { title, description, path = '/', jsonLd = [], noindex = false } = Astro.props;
 const site = import.meta.env.SITE_URL || (Astro.site ? String(Astro.site).replace(/\/$/, '') : '');
-const canonical = site ? `${site}${path}` : null;
-const image = site ? `${site}/og.png` : '/og.png';
+const canonical = site ? `${site}${href(path)}` : null;
+const image = `${site}${href('/og.png')}`;
 ---
 <!doctype html>
 <html lang="en">
@@ -25,9 +26,9 @@ const image = site ? `${site}/og.png` : '/og.png';
     <meta name="description" content={description} />
     {noindex ? <meta name="robots" content="noindex" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
     {canonical && <link rel="canonical" href={canonical} />}
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" href={href('/favicon.svg')} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={href('/apple-touch-icon.png')} />
+    <link rel="manifest" href={href('/manifest.webmanifest')} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Emergency Medical Card" />
     <meta property="og:title" content={title} />
