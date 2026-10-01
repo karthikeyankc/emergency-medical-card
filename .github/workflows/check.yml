@@ -1,0 +1,29 @@
+name: Check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Drift check, tests, and build
+        run: npm run check
+      - name: Browser smoke test, layout at seven screen sizes, and accessibility audit
+        run: |
+          npx astro preview --port 4321 --host 127.0.0.1 &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://127.0.0.1:4321/ && break; sleep 1; done
+          node scripts/smoke.mjs http://127.0.0.1:4321/
+          node scripts/layout.mjs http://127.0.0.1:4321/
+          node scripts/a11y.mjs http://127.0.0.1:4321/

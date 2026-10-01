@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Answer engines are welcome. The site's own summary for them is at /llms.txt

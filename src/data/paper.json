@@ -1,0 +1,4 @@
+{
+  "_note": "Countries where Letter paper is the norm, by ISO 3166-1 alpha-2 code. Everywhere else uses A4. The print-at-home sheet fits inside both, so a wrong guess still prints the card at its true size.",
+  "letter": ["US", "CA", "MX", "PH", "CL", "CO", "VE", "CR", "DO", "GT", "PA", "PR", "SV", "NI", "HN", "BZ"]
+}

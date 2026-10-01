@@ -1,0 +1,422 @@
+# Seed for the condition catalogue. `npm run catalogue:refresh` pulls labels
+# and aliases for every entry from Wikidata in each supported language and
+# writes src/data/conditions.json. `name` overrides a Wikidata label.
+# Entries without `wikidata` are written as given.
+#
+# `prefill` is optional and must carry `sources` with `reviewedOn`. The
+# text was drafted from the named public first-aid pages and is marked as
+# not yet reviewed by a clinician in `reviewedBy`. It is a suggestion the
+# user edits, never locked.
+languages: [en, ta]
+conditions:
+  - id: type-1-diabetes
+    wikidata: Q124407
+    name: { en: Type 1 diabetes, ta: வகை 1 நீரிழிவு }
+    aliases: { en: [T1D, IDDM, Insulin-dependent diabetes] }
+    prefill:
+      do:
+        en:
+          - "If I'm confused, sweaty, or shaky, give me sugar: juice, a sugary drink, or glucose tablets."
+          - "If I'm not better in 15 minutes, give more sugar and call an ambulance."
+          - "If I pass out, put me on my side and call an ambulance."
+      doNot:
+        en:
+          - "Give me insulin."
+          - "Give food or drink if I can't swallow or I'm unconscious."
+      sources:
+        - org: "NHS"
+          title: "Low blood sugar (hypoglycaemia)"
+          url: "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/"
+          reviewedOn: 2026-09-14
+        - org: "Diabetes UK"
+          title: "Hypos"
+          url: "https://www.diabetes.org.uk/about-diabetes/complications/hypos"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: type-2-diabetes
+    wikidata: Q3025883
+    aliases: { en: [T2D] }
+    prefill:
+      do:
+        en:
+          - "If I'm confused, sweaty, or shaky, give me sugar: juice, a sugary drink, or glucose tablets."
+          - "If I'm not better in 15 minutes, give more sugar and call an ambulance."
+          - "If I pass out, put me on my side and call an ambulance."
+      doNot:
+        en:
+          - "Give me insulin."
+          - "Give food or drink if I can't swallow or I'm unconscious."
+      sources:
+        - org: "NHS"
+          title: "Low blood sugar (hypoglycaemia)"
+          url: "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/"
+          reviewedOn: 2026-09-14
+        - org: "Diabetes UK"
+          title: "Hypos"
+          url: "https://www.diabetes.org.uk/about-diabetes/complications/hypos"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: epilepsy
+    wikidata: Q41571
+    aliases: { en: [Seizure disorder] }
+    prefill:
+      do:
+        en:
+          - "Cushion my head and move hard objects away."
+          - "Time the seizure. Call an ambulance if it lasts over 5 minutes or I don't wake up."
+          - "When it stops, roll me on my side and stay with me until I'm fully awake."
+      doNot:
+        en:
+          - "Hold me down."
+          - "Put anything in my mouth."
+          - "Give me food or drink until I'm fully awake."
+      sources:
+        - org: "NHS"
+          title: "Epilepsy"
+          url: "https://www.nhs.uk/conditions/epilepsy/"
+          reviewedOn: 2026-09-14
+        - org: "Epilepsy Action"
+          title: "First aid for seizures"
+          url: "https://www.epilepsy.org.uk/info/firstaid"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: asthma
+    wikidata: Q35869
+    prefill:
+      do:
+        en:
+          - "Sit me upright and help me stay calm."
+          - "Help me take my reliever inhaler, usually blue. One puff every 30 to 60 seconds, up to 10 puffs."
+          - "Call an ambulance if I'm not better after 10 puffs or I'm getting worse."
+      doNot:
+        en:
+          - "Lie me down."
+          - "Leave me alone."
+      sources:
+        - org: "Asthma + Lung UK"
+          title: "Asthma attacks"
+          url: "https://www.asthmaandlung.org.uk/conditions/asthma/asthma-attacks"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: anaphylaxis
+    wikidata: Q168800
+    aliases: { en: [Severe allergy] }
+    prefill:
+      do:
+        en:
+          - "Use my adrenaline pen on my outer thigh, through clothing if needed."
+          - "Call an ambulance and say anaphylaxis."
+          - "Lie me down with my legs raised. If breathing is hard, sit me up."
+          - "Give a second pen after 5 minutes if I'm not better."
+      doNot:
+        en:
+          - "Let me stand or walk, even if I feel better."
+      sources:
+        - org: "NHS"
+          title: "Anaphylaxis"
+          url: "https://www.nhs.uk/conditions/anaphylaxis/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: hypertension
+    wikidata: Q41861
+    name: { en: High blood pressure }
+    aliases: { en: [Hypertension] }
+  - id: heart-failure
+    wikidata: Q181754
+    prefill:
+      do:
+        en:
+          - "For chest pain, sit me down and call an ambulance."
+          - "Help me take my GTN spray if I have one."
+      doNot:
+        en:
+          - "Let me walk around."
+      sources:
+        - org: "NHS"
+          title: "Heart attack"
+          url: "https://www.nhs.uk/conditions/heart-attack/"
+          reviewedOn: 2026-09-14
+        - org: "British Heart Foundation"
+          title: "Heart attack"
+          url: "https://www.bhf.org.uk/informationsupport/conditions/heart-attack"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: atrial-fibrillation
+    wikidata: Q815819
+    name: { ta: ஏட்ரியல் ஃபிப்ரிலேஷன் }
+    aliases: { en: [AFib] }
+  - id: coronary-artery-disease
+    wikidata: Q844935
+    aliases: { en: [Heart disease] }
+    prefill:
+      do:
+        en:
+          - "For chest pain, sit me down and call an ambulance."
+          - "Help me take my GTN spray if I have one."
+      doNot:
+        en:
+          - "Let me walk around."
+      sources:
+        - org: "NHS"
+          title: "Heart attack"
+          url: "https://www.nhs.uk/conditions/heart-attack/"
+          reviewedOn: 2026-09-14
+        - org: "British Heart Foundation"
+          title: "Heart attack"
+          url: "https://www.bhf.org.uk/informationsupport/conditions/heart-attack"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: stroke
+    wikidata: Q12202
+    prefill:
+      do:
+        en:
+          - "Call an ambulance at once if my face droops, an arm is weak, or my speech is slurred."
+          - "Note the time it started and tell the paramedics."
+          - "Keep me still and calm until help arrives."
+      doNot:
+        en:
+          - "Give me food, drink, or medicine."
+          - "Drive me yourself if an ambulance can come."
+      sources:
+        - org: "NHS"
+          title: "Stroke symptoms"
+          url: "https://www.nhs.uk/conditions/stroke/symptoms/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: chronic-kidney-disease
+    wikidata: Q736715
+    name: { en: Chronic kidney disease }
+    aliases: { en: [CKD, Kidney failure] }
+    prefill:
+      do:
+        en:
+          - "Tell medics I'm on dialysis."
+          - "Use my other arm for blood pressure or needles. My dialysis arm has a fistula."
+      doNot:
+        en:
+          - "Take blood pressure or put needles in my fistula arm."
+      sources:
+        - org: "NHS"
+          title: "Dialysis, side effects"
+          url: "https://www.nhs.uk/conditions/dialysis/side-effects/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: haemophilia
+    wikidata: Q134003
+    aliases: { en: [Hemophilia] }
+    prefill:
+      do:
+        en:
+          - "For bleeding, press firmly on the wound and raise it."
+          - "Call an ambulance for any head, neck, or stomach injury, even with no visible bleeding."
+          - "Tell medics I have haemophilia and need clotting factor."
+      doNot:
+        en:
+          - "Give me aspirin or ibuprofen."
+      sources:
+        - org: "NHS"
+          title: "Haemophilia"
+          url: "https://www.nhs.uk/conditions/haemophilia/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: sickle-cell-disease
+    wikidata: Q185034
+    name: { en: Sickle cell disease, ta: அரிவாள் செல் நோய் }
+    prefill:
+      do:
+        en:
+          - "Call an ambulance for sudden severe pain, chest pain, or trouble breathing."
+          - "Keep me warm and give me water if I can drink."
+          - "Tell medics I have sickle cell disease."
+      doNot:
+        en:
+          - "Let me get cold."
+      sources:
+        - org: "NHS"
+          title: "Sickle cell disease"
+          url: "https://www.nhs.uk/conditions/sickle-cell-disease/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: copd
+    wikidata: Q199804
+    aliases: { en: [Chronic obstructive pulmonary disease] }
+    prefill:
+      do:
+        en:
+          - "Sit me upright and help me take slow breaths."
+          - "Help me use my reliever inhaler."
+          - "Call an ambulance if my lips go blue or I can't speak in sentences."
+      doNot:
+        en:
+          - "Lie me flat."
+      sources:
+        - org: "NHS"
+          title: "Chronic obstructive pulmonary disease (COPD)"
+          url: "https://www.nhs.uk/conditions/chronic-obstructive-pulmonary-disease-copd/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: alzheimers-disease
+    wikidata: Q11081
+    prefill:
+      do:
+        en:
+          - "Speak slowly and calmly. One short question at a time."
+          - "Tell me your name and where I am."
+          - "Call my emergency contact. I may be lost."
+      doNot:
+        en:
+          - "Argue with me or rush me."
+          - "Leave me alone in a public place."
+      sources:
+        - org: "Alzheimer's Society"
+          title: "Tips for communicating with a person with dementia"
+          url: "https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/symptoms/tips-for-communicating-dementia"
+          reviewedOn: 2026-09-14
+        - org: "NHS"
+          title: "Dementia"
+          url: "https://www.nhs.uk/conditions/dementia/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: dementia
+    wikidata: Q83030
+    prefill:
+      do:
+        en:
+          - "Speak slowly and calmly. One short question at a time."
+          - "Tell me your name and where I am."
+          - "Call my emergency contact. I may be lost."
+      doNot:
+        en:
+          - "Argue with me or rush me."
+          - "Leave me alone in a public place."
+      sources:
+        - org: "Alzheimer's Society"
+          title: "Tips for communicating with a person with dementia"
+          url: "https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/symptoms/tips-for-communicating-dementia"
+          reviewedOn: 2026-09-14
+        - org: "NHS"
+          title: "Dementia"
+          url: "https://www.nhs.uk/conditions/dementia/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: parkinsons-disease
+    wikidata: Q11085
+    prefill:
+      do:
+        en:
+          - "Give me time. Moving and speaking can be slow, and I may freeze for a moment."
+          - "Help me take my medicines on time. The timing matters."
+      doNot:
+        en:
+          - "Pull me by the arm. Let me set the pace."
+      sources:
+        - org: "NHS"
+          title: "Parkinson's disease"
+          url: "https://www.nhs.uk/conditions/parkinsons-disease/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: multiple-sclerosis
+    wikidata: Q8277
+    aliases: { en: [MS] }
+  - id: autism
+    wikidata: Q38404
+    aliases: { en: [Autism spectrum] }
+    prefill:
+      do:
+        en:
+          - "Speak calmly and plainly. Give me time to answer."
+          - "Take me somewhere quiet if you can."
+          - "Call my emergency contact."
+      doNot:
+        en:
+          - "Touch or restrain me unless I'm in danger."
+          - "Shout."
+      sources:
+        - org: "National Autistic Society"
+          title: "Meltdowns"
+          url: "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: down-syndrome
+    wikidata: Q47715
+  - id: schizophrenia
+    wikidata: Q41112
+  - id: bipolar-disorder
+    wikidata: Q131755
+  - id: addisons-disease
+    wikidata: Q8282
+    aliases: { en: [Adrenal insufficiency] }
+    prefill:
+      do:
+        en:
+          - "If I'm vomiting, confused, or collapse, this may be an adrenal crisis. Call an ambulance and say Addison's disease."
+          - "I carry an emergency hydrocortisone injection. Help me use it, or give it into my outer thigh."
+      doNot:
+        en:
+          - "Wait to see if I improve."
+      sources:
+        - org: "NHS"
+          title: "Addison's disease, treatment"
+          url: "https://www.nhs.uk/conditions/addisons-disease/treatment/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: cystic-fibrosis
+    wikidata: Q178194
+    name: { ta: சிஸ்டிக் ஃபைப்ரோசிஸ் }
+  - id: coeliac-disease
+    wikidata: Q11088
+    name: { en: Coeliac disease }
+    aliases: { en: [Celiac disease] }
+  - id: anticoagulant-therapy
+    name: { en: Taking blood thinners, ta: இரத்தம் உறைதல் தடுப்பு மருந்து }
+    aliases: { en: [Anticoagulants, Warfarin, Blood thinners] }
+    prefill:
+      do:
+        en:
+          - "Press hard on any bleeding for at least 10 minutes."
+          - "Call an ambulance for a head injury or bleeding that won't stop, even if I seem fine."
+          - "Tell medics I take blood thinners."
+      doNot:
+        en:
+          - "Give me aspirin or ibuprofen."
+      sources:
+        - org: "NHS"
+          title: "Anticoagulants, side effects"
+          url: "https://www.nhs.uk/conditions/anticoagulants/side-effects/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: pacemaker
+    name: { en: Pacemaker fitted, ta: இதயத் துடிப்பு சீராக்கி பொருத்தப்பட்டுள்ளது }
+    prefill:
+      do:
+        en:
+          - "Tell medics I have a pacemaker."
+      doNot:
+        en:
+      sources:
+        - org: "NHS"
+          title: "Pacemaker implantation"
+          url: "https://www.nhs.uk/conditions/pacemaker-implantation/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+  - id: organ-transplant
+    name: { en: Organ transplant recipient, ta: உறுப்பு மாற்று அறுவை சிகிச்சை பெற்றவர் }
+  - id: hearing-impaired
+    name: { en: Deaf or hard of hearing, ta: காது கேளாமை }
+  - id: dialysis
+    name: { en: On dialysis, ta: டயாலிசிஸ் சிகிச்சையில் }
+    prefill:
+      do:
+        en:
+          - "Tell medics I'm on dialysis."
+          - "Use my other arm for blood pressure or needles. My dialysis arm has a fistula."
+      doNot:
+        en:
+          - "Take blood pressure or put needles in my fistula arm."
+      sources:
+        - org: "NHS"
+          title: "Dialysis, side effects"
+          url: "https://www.nhs.uk/conditions/dialysis/side-effects/"
+          reviewedOn: 2026-09-14
+    reviewedBy: "Drafted with AI from the sources listed. Not yet reviewed by a clinician."

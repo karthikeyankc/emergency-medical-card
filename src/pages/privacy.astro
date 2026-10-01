@@ -1,0 +1,34 @@
+---
+import Base from '../layouts/Base.astro';
+import Legal from '../components/Legal.astro';
+const title = 'Privacy · Emergency Medical Card';
+const description = "What happens to the details you type into Emergency Medical Card. Nothing you type is sent anywhere. It stays in your browser.";
+---
+<Base title={title} description={description} path="/privacy">
+  <Legal heading="Privacy" updated="25 September 2026">
+    <h2>The short version</h2>
+    <p>Everything you type stays in your browser. There's no account, no cookie, and no tracking script. Nothing you type is ever sent to a server, so nobody, including me, can see your card.</p>
+
+    <h2>Where your details are kept</h2>
+    <p>Your card is saved in your browser's own storage on the device you're using, so it's still there when you come back. If you clear your browser data, the card goes with it. That's why the page asks you to save a copy, which you can do from the File menu.</p>
+    <p>If you choose a font from your computer, the font file is kept in the same browser storage so it can be used again. It's never uploaded. Clearing the card removes the font too.</p>
+
+    <h2>What the site loads</h2>
+    <p>Every file the site needs, including the fonts, icons, and the code that draws the card, comes from the site itself. The page makes no requests to any other company. You can check this in your browser's developer tools.</p>
+
+    <h2>What the host sees</h2>
+    <p>The site is hosted on Cloudflare. Like every web host, Cloudflare receives each request for a page or file, with the visitor's IP address and browser, and it counts visits and the countries they come from. I use those counts to see whether people use the tool. Nothing you type is part of any request, so the counts never include your card.</p>
+
+    <h2>Downloads</h2>
+    <p>The PDF, PNG, and SVG files are made on your device and saved wherever your browser saves downloads. Every file is named after the person on the card, so a family can tell them apart. Keep the saved copy of your card somewhere private. It holds everything on the card.</p>
+
+    <h2>The QR code</h2>
+    <p>If you add a QR code, it holds only what you tick in the QR section. That's your emergency contact numbers and, if you choose, your condition, blood group, hospital, and address. Anyone who scans the printed card can read it. Put in only what you'd be happy to tell a stranger who is trying to help you.</p>
+
+    <h2>Links to other sites</h2>
+    <p>The suggested first aid text links to the pages it came from, such as NHS pages. Those sites have their own privacy practices. This site doesn't tell them who you are.</p>
+
+    <h2>Questions</h2>
+    <p>The code is public, so you can read exactly what it does. If you have a question or a concern, raise it on the project's <a href="https://github.com/KarthikeyanKC/emergency-medical-card/issues">issue tracker on GitHub</a>.</p>
+  </Legal>
+</Base>

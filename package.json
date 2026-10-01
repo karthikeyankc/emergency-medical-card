@@ -1,0 +1,70 @@
+{
+  "name": "emergency-medical-card",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Make a free emergency medical card, or medical ID card, in your browser. Private, with print-ready PDF, PNG, and SVG downloads.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/build-tokens.mjs && node scripts/build-og.mjs && astro build",
+    "preview": "astro preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "docs:check": "node scripts/check-docs.mjs",
+    "render:fixtures": "node scripts/render-fixtures.mjs",
+    "catalogue:refresh": "node scripts/build-conditions.mjs",
+    "tokens": "node scripts/build-tokens.mjs",
+    "check": "npm run docs:check && npm test && npm run build",
+    "a11y": "node scripts/a11y.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "layout": "node scripts/layout.mjs",
+    "prepare": "git config core.hooksPath .githooks 2>/dev/null || true",
+    "phone:refresh": "node scripts/build-phone-formats.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@lucide/astro": "^1.45.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "harfbuzzjs": "^1.6.1",
+    "jspdf": "^4.2.1",
+    "qrcode-generator": "^2.0.4",
+    "svg2pdf.js": "^2.8.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "axe-core": "^4.13.0",
+    "js-yaml": "^4.1.0",
+    "libphonenumber-js": "^1.13.14",
+    "playwright-core": "^1.63.0",
+    "svg-path-bbox": "^2.1.0",
+    "vitest": "^5.0.0"
+  },
+  "author": {
+    "name": "Karthikeyan KC",
+    "url": "https://github.com/KarthikeyanKC"
+  },
+  "homepage": "https://github.com/KarthikeyanKC/emergency-medical-card",
+  "keywords": [
+    "medical id card",
+    "emergency medical card",
+    "medical alert card",
+    "ice card",
+    "medical wallet card",
+    "first aid",
+    "harfbuzz",
+    "astro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KarthikeyanKC/emergency-medical-card.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KarthikeyanKC/emergency-medical-card/issues"
+  }
+}

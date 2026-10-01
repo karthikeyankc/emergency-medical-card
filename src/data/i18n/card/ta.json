@@ -1,0 +1,23 @@
+{
+  "_reviewed": false,
+  "language": "தமிழ்",
+  "alert": "அவசர மருத்துவத் தகவல்",
+  "condition": "நிலை",
+  "name": "பெயர்",
+  "born": "பிறந்த ஆண்டு",
+  "do": "செய்யவும்",
+  "doNot": "செய்ய வேண்டாம்",
+  "carries": "என்னிடம் உள்ளவை",
+  "medications": "மருந்துகள்",
+  "allergies": "ஒவ்வாமைகள்",
+  "noneKnown": "எதுவும் இல்லை",
+  "none": "இல்லை",
+  "contacts": "அவசரத் தொடர்புகள்",
+  "hospital": "விருப்ப மருத்துவமனை",
+  "otherConditions": "பிற நிலைகள்",
+  "bloodGroup": "இரத்த வகை",
+  "emergency": "அவசர எண்",
+  "ambulance": "ஆம்புலன்ஸ்",
+  "address": "முகவரி",
+  "updated": "புதுப்பிக்கப்பட்டது"
+}

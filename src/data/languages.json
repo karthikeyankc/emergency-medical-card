@@ -1,0 +1,336 @@
+{
+  "_note": "Card languages. `script` names the font manifest script that sets it. `unsupported` marks languages the tool cannot set yet: `rtl` until the bidi step exists, `cjk` until a way to ship fonts of that size is found. Card labels come from i18n/card/<id>.json and fall back to English when there is no file.",
+  "languages": [
+    {
+      "id": "en",
+      "name": "English",
+      "native": "English",
+      "script": "latin"
+    },
+    {
+      "id": "ta",
+      "name": "Tamil",
+      "native": "தமிழ்",
+      "script": "tamil"
+    },
+    {
+      "id": "hi",
+      "name": "Hindi",
+      "native": "हिन्दी",
+      "script": "devanagari"
+    },
+    {
+      "id": "mr",
+      "name": "Marathi",
+      "native": "मराठी",
+      "script": "devanagari"
+    },
+    {
+      "id": "ne",
+      "name": "Nepali",
+      "native": "नेपाली",
+      "script": "devanagari"
+    },
+    {
+      "id": "bn",
+      "name": "Bengali",
+      "native": "বাংলা",
+      "script": "bengali"
+    },
+    {
+      "id": "as",
+      "name": "Assamese",
+      "native": "অসমীয়া",
+      "script": "bengali"
+    },
+    {
+      "id": "pa",
+      "name": "Punjabi",
+      "native": "ਪੰਜਾਬੀ",
+      "script": "gurmukhi"
+    },
+    {
+      "id": "gu",
+      "name": "Gujarati",
+      "native": "ગુજરાતી",
+      "script": "gujarati"
+    },
+    {
+      "id": "or",
+      "name": "Odia",
+      "native": "ଓଡ଼ିଆ",
+      "script": "oriya"
+    },
+    {
+      "id": "te",
+      "name": "Telugu",
+      "native": "తెలుగు",
+      "script": "telugu"
+    },
+    {
+      "id": "kn",
+      "name": "Kannada",
+      "native": "ಕನ್ನಡ",
+      "script": "kannada"
+    },
+    {
+      "id": "ml",
+      "name": "Malayalam",
+      "native": "മലയാളം",
+      "script": "malayalam"
+    },
+    {
+      "id": "si",
+      "name": "Sinhala",
+      "native": "සිංහල",
+      "script": "sinhala"
+    },
+    {
+      "id": "th",
+      "name": "Thai",
+      "native": "ไทย",
+      "script": "thai"
+    },
+    {
+      "id": "km",
+      "name": "Khmer",
+      "native": "ខ្មែរ",
+      "script": "khmer"
+    },
+    {
+      "id": "lo",
+      "name": "Lao",
+      "native": "ລາວ",
+      "script": "lao"
+    },
+    {
+      "id": "my",
+      "name": "Burmese",
+      "native": "မြန်မာ",
+      "script": "myanmar"
+    },
+    {
+      "id": "ka",
+      "name": "Georgian",
+      "native": "ქართული",
+      "script": "georgian"
+    },
+    {
+      "id": "hy",
+      "name": "Armenian",
+      "native": "Հայերեն",
+      "script": "armenian"
+    },
+    {
+      "id": "am",
+      "name": "Amharic",
+      "native": "አማርኛ",
+      "script": "ethiopic"
+    },
+    {
+      "id": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "script": "latin"
+    },
+    {
+      "id": "fr",
+      "name": "French",
+      "native": "Français",
+      "script": "latin"
+    },
+    {
+      "id": "de",
+      "name": "German",
+      "native": "Deutsch",
+      "script": "latin"
+    },
+    {
+      "id": "pt",
+      "name": "Portuguese",
+      "native": "Português",
+      "script": "latin"
+    },
+    {
+      "id": "it",
+      "name": "Italian",
+      "native": "Italiano",
+      "script": "latin"
+    },
+    {
+      "id": "nl",
+      "name": "Dutch",
+      "native": "Nederlands",
+      "script": "latin"
+    },
+    {
+      "id": "pl",
+      "name": "Polish",
+      "native": "Polski",
+      "script": "latin"
+    },
+    {
+      "id": "cs",
+      "name": "Czech",
+      "native": "Čeština",
+      "script": "latin"
+    },
+    {
+      "id": "sk",
+      "name": "Slovak",
+      "native": "Slovenčina",
+      "script": "latin"
+    },
+    {
+      "id": "ro",
+      "name": "Romanian",
+      "native": "Română",
+      "script": "latin"
+    },
+    {
+      "id": "hu",
+      "name": "Hungarian",
+      "native": "Magyar",
+      "script": "latin"
+    },
+    {
+      "id": "sv",
+      "name": "Swedish",
+      "native": "Svenska",
+      "script": "latin"
+    },
+    {
+      "id": "no",
+      "name": "Norwegian",
+      "native": "Norsk",
+      "script": "latin"
+    },
+    {
+      "id": "da",
+      "name": "Danish",
+      "native": "Dansk",
+      "script": "latin"
+    },
+    {
+      "id": "fi",
+      "name": "Finnish",
+      "native": "Suomi",
+      "script": "latin"
+    },
+    {
+      "id": "tr",
+      "name": "Turkish",
+      "native": "Türkçe",
+      "script": "latin"
+    },
+    {
+      "id": "id",
+      "name": "Indonesian",
+      "native": "Bahasa Indonesia",
+      "script": "latin"
+    },
+    {
+      "id": "ms",
+      "name": "Malay",
+      "native": "Bahasa Melayu",
+      "script": "latin"
+    },
+    {
+      "id": "tl",
+      "name": "Filipino",
+      "native": "Filipino",
+      "script": "latin"
+    },
+    {
+      "id": "vi",
+      "name": "Vietnamese",
+      "native": "Tiếng Việt",
+      "script": "latin"
+    },
+    {
+      "id": "sw",
+      "name": "Swahili",
+      "native": "Kiswahili",
+      "script": "latin"
+    },
+    {
+      "id": "ru",
+      "name": "Russian",
+      "native": "Русский",
+      "script": "cyrillic"
+    },
+    {
+      "id": "uk",
+      "name": "Ukrainian",
+      "native": "Українська",
+      "script": "cyrillic"
+    },
+    {
+      "id": "bg",
+      "name": "Bulgarian",
+      "native": "Български",
+      "script": "cyrillic"
+    },
+    {
+      "id": "sr",
+      "name": "Serbian",
+      "native": "Српски",
+      "script": "cyrillic"
+    },
+    {
+      "id": "el",
+      "name": "Greek",
+      "native": "Ελληνικά",
+      "script": "greek"
+    },
+    {
+      "id": "ar",
+      "name": "Arabic",
+      "native": "العربية",
+      "script": "arabic",
+      "unsupported": "rtl"
+    },
+    {
+      "id": "ur",
+      "name": "Urdu",
+      "native": "اردو",
+      "script": "arabic",
+      "unsupported": "rtl"
+    },
+    {
+      "id": "fa",
+      "name": "Persian",
+      "native": "فارسی",
+      "script": "arabic",
+      "unsupported": "rtl"
+    },
+    {
+      "id": "he",
+      "name": "Hebrew",
+      "native": "עברית",
+      "script": "hebrew",
+      "unsupported": "rtl"
+    },
+    {
+      "id": "zh",
+      "name": "Chinese",
+      "native": "中文",
+      "script": "han",
+      "unsupported": "cjk"
+    },
+    {
+      "id": "ja",
+      "name": "Japanese",
+      "native": "日本語",
+      "script": "japanese",
+      "unsupported": "cjk"
+    },
+    {
+      "id": "ko",
+      "name": "Korean",
+      "native": "한국어",
+      "script": "korean",
+      "unsupported": "cjk"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "_note": "`latin` lists the families the user can choose for Latin, Greek, and Cyrillic text. `scripts` maps every script the card can set to its Unicode Script name and, unless it uses the chosen Latin family, to one variable Noto font with weights on the wght axis. Fonts load only when a language that needs them is chosen. Licences sit beside the files. verifiedAt7pt is set only after a physical print has been checked by a native reader. `fallback` fills Latin, Greek, and Cyrillic characters the chosen family lacks.",
+  "defaultLatin": "roboto-condensed",
+  "latin": {
+    "inter": {
+      "family": "Inter",
+      "file": "inter/Inter-Variable.ttf",
+      "axes": {},
+      "licence": "inter/OFL.txt",
+      "source": "https://github.com/rsms/inter",
+      "note": "The editor's face. Wide and open."
+    },
+    "plex": {
+      "family": "IBM Plex Sans",
+      "file": "plex/IBMPlexSans-Variable.ttf",
+      "axes": {},
+      "licence": "plex/OFL.txt",
+      "source": "https://github.com/IBM/plex",
+      "note": "Neutral, slightly narrower than Inter."
+    },
+    "plex-condensed": {
+      "family": "IBM Plex Sans Condensed",
+      "file": "plex/IBMPlexSans-Variable.ttf",
+      "axes": {
+        "wdth": 85
+      },
+      "licence": "plex/OFL.txt",
+      "source": "https://github.com/IBM/plex",
+      "note": "Same file at 85 percent width. Saves space."
+    },
+    "atkinson": {
+      "family": "Atkinson Hyperlegible Next",
+      "file": "atkinson/AtkinsonHyperlegibleNext-Variable.ttf",
+      "axes": {},
+      "licence": "atkinson/OFL.txt",
+      "source": "https://github.com/googlefonts/atkinson-hyperlegible-next",
+      "note": "Designed by the Braille Institute for low-vision legibility. Distinct letterforms."
+    },
+    "roboto": {
+      "family": "Roboto",
+      "file": "roboto/Roboto-Variable.ttf",
+      "axes": {},
+      "licence": "roboto/OFL.txt",
+      "source": "https://github.com/googlefonts/roboto-3-classic",
+      "note": "Android's face."
+    },
+    "roboto-condensed": {
+      "family": "Roboto Condensed",
+      "file": "roboto/Roboto-Variable.ttf",
+      "axes": {
+        "wdth": 75
+      },
+      "licence": "roboto/OFL.txt",
+      "source": "https://github.com/googlefonts/roboto-3-classic",
+      "note": "Same file at 75 percent width. The most space-saving option."
+    },
+    "arimo": {
+      "family": "Arimo",
+      "file": "arimo/Arimo-Variable.ttf",
+      "axes": {},
+      "licence": "arimo/OFL.txt",
+      "source": "https://github.com/googlefonts/arimo",
+      "note": "Metric-compatible with Helvetica and Arial."
+    }
+  },
+  "scripts": {
+    "latin": {
+      "unicode": "Latin",
+      "useLatinFamily": true
+    },
+    "greek": {
+      "unicode": "Greek",
+      "useLatinFamily": true
+    },
+    "cyrillic": {
+      "unicode": "Cyrillic",
+      "useLatinFamily": true
+    },
+    "devanagari": {
+      "unicode": "Devanagari",
+      "family": "Noto Sans Devanagari",
+      "file": "noto/NotoSansDevanagari-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/devanagari",
+      "verifiedAt7pt": false
+    },
+    "bengali": {
+      "unicode": "Bengali",
+      "family": "Noto Sans Bengali",
+      "file": "noto/NotoSansBengali-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/bengali",
+      "verifiedAt7pt": false
+    },
+    "gurmukhi": {
+      "unicode": "Gurmukhi",
+      "family": "Noto Sans Gurmukhi",
+      "file": "noto/NotoSansGurmukhi-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/gurmukhi",
+      "verifiedAt7pt": false
+    },
+    "gujarati": {
+      "unicode": "Gujarati",
+      "family": "Noto Sans Gujarati",
+      "file": "noto/NotoSansGujarati-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/gujarati",
+      "verifiedAt7pt": false
+    },
+    "oriya": {
+      "unicode": "Oriya",
+      "family": "Noto Sans Oriya",
+      "file": "noto/NotoSansOriya-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/oriya",
+      "verifiedAt7pt": false
+    },
+    "telugu": {
+      "unicode": "Telugu",
+      "family": "Noto Sans Telugu",
+      "file": "noto/NotoSansTelugu-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/telugu",
+      "verifiedAt7pt": false
+    },
+    "kannada": {
+      "unicode": "Kannada",
+      "family": "Noto Sans Kannada",
+      "file": "noto/NotoSansKannada-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/kannada",
+      "verifiedAt7pt": false
+    },
+    "malayalam": {
+      "unicode": "Malayalam",
+      "family": "Noto Sans Malayalam",
+      "file": "noto/NotoSansMalayalam-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/malayalam",
+      "verifiedAt7pt": false
+    },
+    "sinhala": {
+      "unicode": "Sinhala",
+      "family": "Noto Sans Sinhala",
+      "file": "noto/NotoSansSinhala-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/sinhala",
+      "verifiedAt7pt": false
+    },
+    "thai": {
+      "unicode": "Thai",
+      "family": "Noto Sans Thai",
+      "file": "noto/NotoSansThai-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/thai",
+      "verifiedAt7pt": false
+    },
+    "tamil": {
+      "unicode": "Tamil",
+      "family": "Noto Sans Tamil",
+      "file": "noto/NotoSansTamil-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/tamil",
+      "verifiedAt7pt": false
+    },
+    "georgian": {
+      "unicode": "Georgian",
+      "family": "Noto Sans Georgian",
+      "file": "noto/NotoSansGeorgian-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/georgian",
+      "verifiedAt7pt": false
+    },
+    "armenian": {
+      "unicode": "Armenian",
+      "family": "Noto Sans Armenian",
+      "file": "noto/NotoSansArmenian-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/armenian",
+      "verifiedAt7pt": false
+    },
+    "ethiopic": {
+      "unicode": "Ethiopic",
+      "family": "Noto Sans Ethiopic",
+      "file": "noto/NotoSansEthiopic-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/ethiopic",
+      "verifiedAt7pt": false
+    },
+    "khmer": {
+      "unicode": "Khmer",
+      "family": "Noto Sans Khmer",
+      "file": "noto/NotoSansKhmer-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/khmer",
+      "verifiedAt7pt": false
+    },
+    "lao": {
+      "unicode": "Lao",
+      "family": "Noto Sans Lao",
+      "file": "noto/NotoSansLao-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/lao",
+      "verifiedAt7pt": false
+    },
+    "myanmar": {
+      "unicode": "Myanmar",
+      "family": "Noto Sans Myanmar",
+      "file": "noto/NotoSansMyanmar-Variable.ttf",
+      "licence": "noto/OFL.txt",
+      "source": "https://github.com/notofonts/myanmar",
+      "verifiedAt7pt": false
+    }
+  },
+  "fallback": {
+    "family": "Noto Sans",
+    "files": {
+      "400": "latin/NotoSans-Regular.ttf",
+      "700": "latin/NotoSans-Bold.ttf"
+    },
+    "licence": "latin/OFL.txt",
+    "source": "https://github.com/notofonts/latin-greek-cyrillic",
+    "note": "Loaded only when the chosen family lacks a Latin, Greek, or Cyrillic character the card needs. Atkinson Hyperlegible Next has no Greek or Cyrillic and misses some Vietnamese letters, and a font from the user's computer can lack anything."
+  }
+}

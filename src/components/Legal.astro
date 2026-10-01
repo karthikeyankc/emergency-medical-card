@@ -1,0 +1,23 @@
+---
+/** Shared shell for the privacy and terms pages. */
+import Footer from './Footer.astro';
+import ui from '../data/i18n/ui/en.json';
+const { heading, updated } = Astro.props;
+---
+<div class="min-h-full flex flex-col">
+  <header class="px-6 py-4 flex items-center gap-4 border-b border-(--bds) bg-(--s1)">
+    <a href="/" class="inline-flex items-center gap-3 no-underline">
+      <img src="/logo.svg" alt="" width="48" height="30" />
+      <span class="text-xl font-bold tracking-tight text-(--t1)">{ui.title}</span>
+    </a>
+  </header>
+  <main class="flex-1 px-6 py-10">
+    <article class="mx-auto max-w-prose space-y-5 legal">
+      <h1 class="text-3xl font-bold tracking-tight">{heading}</h1>
+      <p class="text-(--t3) text-sm">{ui.legal.updated} {updated}</p>
+      <slot />
+      <p><a href="/">{ui.legal.back}</a></p>
+    </article>
+  </main>
+  <Footer />
+</div>

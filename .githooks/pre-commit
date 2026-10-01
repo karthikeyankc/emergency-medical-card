@@ -1,0 +1,6 @@
+#!/bin/sh
+# Stops a commit when the documents have drifted from the code or a test fails.
+# Installed by `npm install`, which points git at this folder.
+set -e
+node scripts/check-docs.mjs
+npx vitest run --reporter=dot

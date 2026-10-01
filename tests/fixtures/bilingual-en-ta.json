@@ -1,0 +1,93 @@
+{
+  "version": 2,
+  "format": "id1-landscape",
+  "mode": "bilingual",
+  "language": "en",
+  "secondLanguage": "ta",
+  "emblem": "red-cross",
+  "person": {
+    "name": {
+      "en": "Sara Kumar",
+      "ta": "சாரா குமார்"
+    },
+    "birthYear": "1958",
+    "bloodGroup": "B+",
+    "address": {
+      "en": ""
+    },
+    "showAddress": false
+  },
+  "conditions": [
+    {
+      "id": "type-1-diabetes",
+      "name": {
+        "en": "Type 1 diabetes",
+        "ta": "வகை 1 நீரிழிவு"
+      },
+      "primary": true,
+      "icon": {
+        "kind": "generic"
+      }
+    }
+  ],
+  "do": {
+    "en": "If I am confused or shaky, give me sugar or juice.\nIf I cannot swallow, call an ambulance.",
+    "ta": "நான் குழப்பமாக இருந்தால் சர்க்கரை அல்லது பழச்சாறு கொடுங்கள்.\nவிழுங்க முடியாவிட்டால் ஆம்புலன்ஸை அழைக்கவும்."
+  },
+  "doNot": {
+    "en": "Give me insulin.\nLeave me alone.",
+    "ta": "எனக்கு இன்சுலின் கொடுப்பது.\nஎன்னைத் தனியாக விடுவது."
+  },
+  "carries": {
+    "en": "Glucose tablets, left jacket pocket.",
+    "ta": "குளுக்கோஸ் மாத்திரைகள், இடது சட்டைப் பையில்."
+  },
+  "medications": [
+    {
+      "name": {
+        "en": "Insulin glargine"
+      },
+      "dose": "20 units",
+      "frequency": {
+        "en": "at night",
+        "ta": "இரவில்"
+      }
+    }
+  ],
+  "allergies": {
+    "en": "Penicillin",
+    "ta": "பென்சிலின்"
+  },
+  "contacts": [
+    {
+      "name": {
+        "en": "Ravi Kumar",
+        "ta": "ரவி குமார்"
+      },
+      "relationship": {
+        "en": "son",
+        "ta": "மகன்"
+      },
+      "phone": "+44 7700 900123"
+    }
+  ],
+  "hospital": {
+    "en": ""
+  },
+  "otherConditions": {
+    "en": ""
+  },
+  "emergency": {
+    "country": "IN"
+  },
+  "qr": {
+    "on": false,
+    "size": 14,
+    "include": {
+      "condition": true,
+      "blood": false,
+      "hospital": false,
+      "address": false
+    }
+  }
+}

@@ -1,0 +1,493 @@
+---
+import Base from '../layouts/Base.astro';
+import LocalisedField from '../components/LocalisedField.astro';
+import ui from '../data/i18n/ui/en.json';
+import numbers from '../data/emergency-numbers.json';
+import catalogue from '../data/conditions.json';
+import fonts from '../fonts/manifest.json';
+import languages from '../data/languages.json';
+import { Download, ChevronDown, Check, FileText, Plus, Trash2, Sun, Moon, Save, FolderOpen, Eraser, Upload, User, Stethoscope, LifeBuoy, Pill, Phone, Hospital, CircleHelp, Search, X, QrCode, Smartphone, RectangleHorizontal, Printer, Image as ImageIcon, FileCode } from '@lucide/astro';
+import { palettes } from '../card/tokens.js';
+import { formatNames } from '../card/formats/index.js';
+import Callout from '../components/Callout.astro';
+import Footer from '../components/Footer.astro';
+import symbols from '../data/symbols.json';
+const t = ui;
+const f = ui.fields;
+const regionName = new Intl.DisplayNames(['en'], { type: 'region' });
+/** Every ISO 3166-1 alpha-2 region the runtime knows, by name. */
+const allCountries = [];
+for (let i = 65; i <= 90; i++) for (let j = 65; j <= 90; j++) {
+  const code = String.fromCharCode(i) + String.fromCharCode(j);
+  let name;
+  try { name = regionName.of(code); } catch { continue; }
+  if (name && name !== code) allCountries.push([code, name]);
+}
+allCountries.sort((a, b) => a[1].localeCompare(b[1]));
+const common = ['IN', 'GB', 'US', 'AE', 'SG', 'MY', 'AU', 'CA', 'DE', 'FR', 'LK', 'SA'];
+const numberOf = (code) => { const n = numbers[code]; return n ? ` · ${n.general}${n.ambulance ? ` / ${n.ambulance}` : ''}` : ''; };
+
+// Structured data as one linked graph: the site, its author, the tool, and this page with its questions.
+// Search engines need absolute URLs, so they appear only when SITE_URL is set at build time.
+const site = (import.meta.env.SITE_URL || (Astro.site ? String(Astro.site) : '')).replace(/\/$/, '');
+const abs = (path) => (site ? `${site}${path}` : path);
+const repo = 'https://github.com/KarthikeyanKC/emergency-medical-card';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': abs('/#website'),
+      url: abs('/'),
+      name: t.title,
+      alternateName: ['Medical ID card maker', 'Medical wallet card maker', 'Emergency medical card maker'],
+      inLanguage: 'en',
+      publisher: { '@id': abs('/#author') },
+    },
+    {
+      '@type': 'Person',
+      '@id': abs('/#author'),
+      name: 'Karthikeyan KC',
+      url: 'https://github.com/KarthikeyanKC',
+      sameAs: ['https://github.com/KarthikeyanKC'],
+    },
+    {
+      '@type': 'WebApplication',
+      '@id': abs('/#app'),
+      name: t.title,
+      alternateName: ['Medical ID card maker', 'Medical wallet card maker'],
+      url: abs('/'),
+      description: t.seoDescription,
+      applicationCategory: 'HealthApplication',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires a modern web browser.',
+      isAccessibleForFree: true,
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      author: { '@id': abs('/#author') },
+      license: 'https://opensource.org/license/mit',
+      codeRepository: repo,
+      sameAs: [repo],
+      image: abs('/og.png'),
+      screenshot: abs('/og.png'),
+      inLanguage: 'en',
+      about: { '@type': 'Thing', name: 'Medical identification', sameAs: 'https://en.wikipedia.org/wiki/Medical_identification_tag' },
+      audience: { '@type': 'PeopleAudience', audienceType: 'People with a medical condition, their carers, and travellers' },
+      featureList: [
+        'Wallet card at 85.6 × 54 mm and pocket card at 105 × 74 mm',
+        'One language or two, one on each side, from 47 languages',
+        'Suggested first aid text for common conditions, citing public sources',
+        'Print-ready vector PDF, a sheet to print at home, PNG, and SVG',
+        'A lock screen image for your phone',
+        'Emergency numbers for 117 countries, each checked against a public source',
+        'Optional QR code with the emergency contact numbers',
+        'Nothing typed is sent anywhere',
+      ],
+    },
+    {
+      '@type': ['WebPage', 'FAQPage'],
+      '@id': abs('/#webpage'),
+      url: abs('/'),
+      name: t.seoTitle,
+      description: t.seoDescription,
+      inLanguage: 'en',
+      isPartOf: { '@id': abs('/#website') },
+      about: { '@id': abs('/#app') },
+      primaryImageOfPage: abs('/og.png'),
+      mainEntity: t.faq.map((q) => ({ '@type': 'Question', name: q.q, acceptedAnswer: { '@type': 'Answer', text: q.a } })),
+    },
+  ],
+};
+---
+<Base title={t.seoTitle} description={t.seoDescription} path="/" jsonLd={[structuredData]}>
+  <div class="min-h-full flex flex-col">
+    <header class="site-header">
+      <div class="max-w-[1400px] mx-auto px-4 py-3 sm:px-6 sm:py-4 grid grid-cols-[auto_1fr_auto] items-center gap-x-3 sm:gap-x-4">
+        <img src="/logo.svg" alt="" width="44" height="28" class="w-9 sm:w-11 h-auto sm:row-span-2" />
+        <h1 class="text-lg sm:text-xl font-bold tracking-tight">{t.title}</h1>
+        <button type="button" class="btn btn-secondary btn-icon sm:row-span-2" id="theme-toggle" aria-label={t.themeToDark} data-label-dark={t.themeToDark} data-label-light={t.themeToLight}><Moon class="theme-moon" aria-hidden="true" /><Sun class="theme-sun" aria-hidden="true" /></button>
+        <p class="col-span-3 sm:col-span-1 sm:col-start-2 mt-1 sm:mt-0 text-sm sm:text-base text-(--t3)">{t.intro} <button type="button" class="tip tip-below align-middle max-sm:hidden" data-tip={t.privacyLine} aria-label={t.privacyLine}><CircleHelp aria-hidden="true" /></button></p>
+      </div>
+    </header>
+
+    <main class="flex-1 grid gap-5 p-4 sm:gap-8 sm:p-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] max-w-[1400px] w-full mx-auto">
+      <aside class="preview-column order-first xl:order-last self-start">
+        <div class="surface p-4 sm:p-5 space-y-4 sm:space-y-5" id="preview-panel" role="tabpanel">
+          <div class="flex items-center justify-between gap-3 flex-wrap">
+            <div class="tabs" role="tablist" aria-label={t.previewTabs}>
+              <button type="button" class="tab" role="tab" id="tab-card" aria-selected="true" aria-controls="preview-panel">{t.tabCard}</button>
+              <button type="button" class="tab" role="tab" id="tab-example" aria-selected="false" aria-controls="preview-panel">{t.tabExample}</button>
+            </div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <p class="text-(--t3) text-base" id="preview-status">{t.loadingFonts}</p>
+              <div class="tabs" role="group" aria-label={t.viewLabel}>
+                <button type="button" class="tab" id="view-card" aria-pressed="true"><RectangleHorizontal aria-hidden="true" /> {t.viewCard}</button>
+                <button type="button" class="tab" id="view-phone" aria-pressed="false"><Smartphone aria-hidden="true" /> {t.viewPhone}</button>
+              </div>
+            </div>
+          </div>
+          <div class="menubar" role="toolbar" aria-label={t.cardToolbar}>
+            <div class="dropdown">
+              <button type="button" class="btn btn-ghost btn-sm" id="menu-file" data-menu="file-menu" aria-haspopup="menu" aria-expanded="false" aria-controls="file-menu">{t.menuFile} <ChevronDown aria-hidden="true" /></button>
+              <div class="dropdown-menu" id="file-menu" role="menu" aria-labelledby="menu-file">
+                <button type="button" class="dropdown-item" role="menuitem" id="save-json"><Save aria-hidden="true" /> {t.saveJson}</button>
+                <button type="button" class="dropdown-item" role="menuitem" id="open-json"><FolderOpen aria-hidden="true" /> {t.loadJson}</button>
+                <div class="dropdown-divider" role="separator"></div>
+                <button type="button" class="dropdown-item danger" role="menuitem" id="clear"><Eraser aria-hidden="true" /> {t.clear}</button>
+              </div>
+              <input type="file" id="load-json" accept="application/json,.json" class="sr-only" tabindex="-1" aria-hidden="true" />
+            </div>
+            <div class="dropdown">
+              <button type="button" class="btn btn-ghost btn-sm" id="menu-language" data-menu="language-menu" aria-haspopup="true" aria-expanded="false" aria-controls="language-menu">{t.menuLanguage} <ChevronDown aria-hidden="true" /></button>
+              <div class="dropdown-menu menu-panel" id="language-menu" role="group" aria-labelledby="menu-language">
+                <div>
+                  <label class="label" for="language">{f.language}</label>
+                  <select class="input" id="language" data-bind="language">
+                    {languages.languages.map((l) => <option value={l.id} disabled={Boolean(l.unsupported)}>{l.native}{l.native !== l.name ? ` (${l.name})` : ''}{l.unsupported ? ` · ${f.notYet}` : ''}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label class="label" for="second-language">{f.secondLanguage}</label>
+                  <select class="input" id="second-language">
+                    <option value="">{f.noSecondLanguage}</option>
+                    {languages.languages.map((l) => <option value={l.id} disabled={Boolean(l.unsupported)}>{l.native}{l.native !== l.name ? ` (${l.name})` : ''}{l.unsupported ? ` · ${f.notYet}` : ''}</option>)}
+                  </select>
+                  <span class="help">{f.modeBilingualHelp}</span>
+                </div>
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" class="btn btn-ghost btn-sm" id="menu-size" data-menu="size-menu" aria-haspopup="menu" aria-expanded="false" aria-controls="size-menu">{t.menuSize} <ChevronDown aria-hidden="true" /></button>
+              <div class="dropdown-menu" id="size-menu" role="menu" aria-labelledby="menu-size">
+                {Object.entries(formatNames).map(([id, name]) => (
+                  <label class="dropdown-item" role="menuitemradio">
+                    <input type="radio" class="sr-only" name="format" value={id} data-bind="format" />
+                    <span class="flex-1">{name}</span>
+                    <Check class="item-check" aria-hidden="true" />
+                  </label>
+                ))}
+              </div>
+            </div>
+            <div class="dropdown">
+              <button type="button" class="btn btn-ghost btn-sm" id="menu-look" data-menu="look-menu" aria-haspopup="true" aria-expanded="false" aria-controls="look-menu">{t.menuLook} <ChevronDown aria-hidden="true" /></button>
+              <div class="dropdown-menu menu-panel" id="look-menu" role="group" aria-labelledby="menu-look">
+                <div class="space-y-2">
+                  <span class="label">{t.colours}</span>
+                  <div class="flex flex-wrap gap-2" role="radiogroup" aria-label={t.colours}>
+                    {Object.entries(palettes).map(([id, p]) => (
+                      <label class={`swatch swatch-${id}`}>
+                        <input type="radio" name="theme" value={id} data-bind="theme" />
+                        <span class="swatch-dot" aria-hidden="true"></span>
+                        <span>{p.name}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <div class="field-head">
+                    <label class="label" for="font">{f.font}</label>
+                    <button type="button" class="tip" data-tip={f.fontHelp} aria-label={f.fontHelp}><CircleHelp aria-hidden="true" /></button>
+                  </div>
+                  <select class="input" id="font" data-bind="font">
+                    {Object.entries(fonts.latin).map(([id, fam]) => <option value={id}>{fam.family}</option>)}
+                    <option value="custom">{f.fontCustom}</option>
+                  </select>
+                </div>
+                <div>
+                  <div class="field-head">
+                    <label class="label" for="emblem">{f.emblem}</label>
+                    <button type="button" class="tip" data-tip={f.emblemHelp} aria-label={f.emblemHelp}><CircleHelp aria-hidden="true" /></button>
+                  </div>
+                  <select class="input" id="emblem" data-bind="emblem">
+                    <option value="red-cross">{f.emblemRedCross}</option>
+                    <option value="rod-of-asclepius">{f.emblemRod}</option>
+                    <option value="none">{f.emblemNone}</option>
+                  </select>
+                </div>
+                <label class="flex items-start gap-3"><input type="checkbox" class="checkbox mt-1.5" data-bind="showDate" /><span><span class="block">{f.showDate}</span><span class="help !mt-0">{f.showDateHelp}</span></span></label>
+              </div>
+            </div>
+            <span class="flex-1"></span>
+            <div class="dropdown tooltip" id="download-wrap">
+              <button type="button" class="btn btn-primary btn-sm" id="download" aria-haspopup="menu" aria-expanded="false" aria-controls="download-menu" aria-disabled="true" aria-describedby="download-why"><Download aria-hidden="true" /> {t.download} <ChevronDown aria-hidden="true" /></button>
+              <div class="tooltip-content tooltip-block" id="download-why" role="tooltip"></div>
+              <div class="dropdown-menu" id="download-menu" role="menu" aria-labelledby="download">
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-pdf"><FileText aria-hidden="true" /> {t.pdf}</button>
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-sheet"><Printer aria-hidden="true" /> <span data-sheet-label>{t.sheet}</span></button>
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-phone"><Smartphone aria-hidden="true" /> {t.pngPhone}</button>
+                <div class="dropdown-divider" role="separator"></div>
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-png" data-dpi="600"><ImageIcon aria-hidden="true" /> {t.png600}</button>
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-png-300" data-dpi="300"><ImageIcon aria-hidden="true" /> {t.png300}</button>
+                <button type="button" class="dropdown-item" role="menuitem" id="dl-svg"><FileCode aria-hidden="true" /> {t.svg}</button>
+              </div>
+            </div>
+          </div>
+          <div id="font-custom" hidden class="rounded-lg border border-(--bds) p-4 space-y-3">
+                  <p class="text-base">{f.fontCustomHelp}</p>
+                  <div class="flex flex-wrap gap-3 items-center">
+                    <label class="btn btn-secondary btn-sm cursor-pointer"><Upload aria-hidden="true" /> {f.fontRegular}<input type="file" id="font-file-regular" accept=".ttf,.otf,.ttc,font/ttf,font/otf,font/collection" class="sr-only" /></label>
+                    <label class="btn btn-secondary btn-sm cursor-pointer"><Upload aria-hidden="true" /> {f.fontBold}<input type="file" id="font-file-bold" accept=".ttf,.otf,.ttc,font/ttf,font/otf,font/collection" class="sr-only" /></label>
+                    <button type="button" class="btn btn-secondary btn-sm" id="font-local" hidden>{f.fontLocal}</button>
+                    <select class="input !w-auto !min-h-10 !py-1" id="font-local-list" hidden aria-label={f.fontLocal}></select>
+                  </div>
+                  <p class="help !mt-0" id="font-status"></p>
+                  <div id="font-error" hidden></div>
+                </div>
+          <div id="language-note" hidden></div>
+          <Callout kind="info" id="phone-tip" hidden title={t.phoneTipTitle}><p>{t.phoneTip}</p><p>{t.phoneTipMedicalId}</p></Callout>
+          <figure id="view-phone-wrap" hidden class="flex flex-col items-center gap-3" aria-hidden="true">
+            <div class="phone-frame" id="preview-phone"></div>
+          </figure>
+          <div id="view-card-wrap" class="grid gap-5 sm:grid-cols-2" aria-hidden="true">
+            <figure class="space-y-2">
+              <div class="preview-card" id="preview-front"></div>
+              <figcaption class="flex items-center gap-3 text-sm text-(--t3)">
+                <span class="w-12">{t.front}</span>
+                <span class="gauge flex-1" data-gauge="front"><span></span></span>
+                <span class="w-12 text-right tabular-nums" data-fill="front">0%</span>
+              </figcaption>
+            </figure>
+            <figure class="space-y-2">
+              <div class="preview-card" id="preview-back"></div>
+              <figcaption class="flex items-center gap-3 text-sm text-(--t3)">
+                <span class="w-12">{t.back}</span>
+                <span class="gauge flex-1" data-gauge="back"><span></span></span>
+                <span class="w-12 text-right tabular-nums" data-fill="back">0%</span>
+              </figcaption>
+            </figure>
+          </div>
+          <div id="messages" class="space-y-3" aria-live="polite"></div>
+
+          <p class="help !mt-2" id="backup-text">{t.savedHere}</p>
+          <div id="export-note" hidden></div>
+          <div id="clear-confirm" hidden class="callout callout-danger" role="alertdialog" aria-labelledby="clear-confirm-text">
+            <div class="callout-body">
+              <p id="clear-confirm-text">{t.clearConfirm}</p>
+              <div class="flex flex-wrap gap-2 mt-3">
+                <button type="button" class="btn btn-danger btn-sm" id="clear-yes">{t.clearYes}</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="clear-no">{t.clearNo}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <dialog id="download-why-dialog" class="modal modal-drawer" aria-labelledby="download-why-title">
+          <div class="modal-header">
+            <h2 id="download-why-title" class="modal-title">{t.incompleteHeading}</h2>
+            <button type="button" class="btn btn-icon" data-close aria-label={f.close}><X aria-hidden="true" /></button>
+          </div>
+          <div class="modal-body py-4" id="download-why-body"></div>
+        </dialog>
+
+      </aside>
+
+      <form id="card-form" class="space-y-6" novalidate autocomplete="off">
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-rose" aria-hidden="true"><User /></span>{t.sections.person}</h2>
+          <LocalisedField path="person.name" label={f.name} required />
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label class="label" for="birthYear">{f.birthYear}</label>
+              <input class="input" id="birthYear" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" data-bind="person.birthYear" aria-describedby="birthYear-error" />
+              <span class="help">{f.birthYearHelp}</span><span class="help field-error" id="birthYear-error" data-error-for="person.birthYear" hidden>{f.birthYearInvalid}</span>
+            </div>
+            <div>
+              <div class="field-head">
+                <label class="label" for="bloodGroup">{f.bloodGroup}</label>
+                <button type="button" class="tip" data-tip={f.bloodGroupHelp} aria-label={f.bloodGroupHelp}><CircleHelp aria-hidden="true" /></button>
+              </div>
+              <select class="input" id="bloodGroup" data-bind="person.bloodGroup">
+                <option value="">{f.bloodGroupNone}</option>
+                <optgroup label={f.bloodGroupCommon}>
+                  {['A+', 'A−', 'B+', 'B−', 'AB+', 'AB−', 'O+', 'O−'].map((g) => <option value={g}>{g}</option>)}
+                </optgroup>
+                <optgroup label={f.bloodGroupSubgroups}>
+                  {['A1+', 'A1−', 'A2+', 'A2−', 'A1B+', 'A1B−', 'A2B+', 'A2B−'].map((g) => <option value={g}>{g}</option>)}
+                </optgroup>
+                <optgroup label={f.bloodGroupRare}>
+                  <option value="Bombay (hh)">Bombay (hh)</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-amber" aria-hidden="true"><Stethoscope /></span>{t.sections.condition}</h2>
+          <LocalisedField path="conditions.0.name" label={f.condition} tip={f.conditionHelp} required list="conditions-list" />
+          <datalist id="conditions-list">
+            {catalogue.conditions.map((c) => <option value={c.name.en}>{c.aliases.en.slice(0, 3).join(', ')}</option>)}
+          </datalist>
+          <div>
+            <div class="field-head">
+              <span class="label">{f.icon}</span>
+              <button type="button" class="tip" data-tip={f.iconHelp} aria-label={f.iconHelp}><CircleHelp aria-hidden="true" /></button>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="w-9 h-9 rounded-md bg-(--s3) flex items-center justify-center overflow-hidden [&_svg]:w-5 [&_svg]:h-5 [&_img]:w-7 [&_img]:h-7" id="icon-preview" aria-hidden="true"></span>
+              <button type="button" class="btn btn-secondary btn-sm" id="icon-pick"><Search aria-hidden="true" /> {f.iconPick}</button>
+              <label class="btn btn-ghost btn-sm cursor-pointer"><Upload aria-hidden="true" /> {f.iconUpload}<input type="file" id="icon-file" accept="image/svg+xml,image/png" class="sr-only" /></label>
+              <button type="button" class="btn btn-ghost btn-sm" id="icon-remove" hidden>{f.iconRemove}</button>
+            </div>
+            <dialog id="icon-picker" class="icon-picker" aria-labelledby="icon-picker-title">
+              <div class="flex items-center gap-3 mb-3">
+                <h3 id="icon-picker-title" class="font-bold text-lg flex-1">{f.iconPickerTitle}</h3>
+                <button type="button" class="btn btn-ghost btn-sm" id="icon-picker-close" aria-label={f.close}><X aria-hidden="true" /></button>
+              </div>
+              <div class="tabs mb-3" role="tablist" aria-label={f.iconPickerTitle}>
+                <button type="button" class="tab" role="tab" id="picker-tab-icons" aria-selected="true" aria-controls="picker-icons">{f.iconTabIcons}</button>
+                <button type="button" class="tab" role="tab" id="picker-tab-symbols" aria-selected="false" aria-controls="picker-symbols">{f.iconTabSymbols}</button>
+              </div>
+              <div id="picker-icons" role="tabpanel">
+                <label class="sr-only" for="icon-search">{f.iconSearch}</label>
+                <input class="input mb-3" id="icon-search" type="search" placeholder={f.iconSearch} autocomplete="off" />
+                <div id="icon-grid" class="icon-grid"></div>
+                <p class="help">{f.iconPickerHelp}</p>
+              </div>
+              <div id="picker-symbols" role="tabpanel" hidden>
+                <div class="icon-grid">
+                  {symbols.map((sym) => (
+                    <button type="button" class="icon-choice symbol-choice" data-symbol={sym.id} title={`${sym.name}. ${sym.meaning}. By ${sym.author}, ${sym.licence}, Wikimedia Commons.`} aria-label={`${sym.name}, ${sym.meaning}`}>
+                      <svg viewBox={sym.viewBox} xmlns="http://www.w3.org/2000/svg" aria-hidden="true" set:html={sym.markup} />
+                    </button>
+                  ))}
+                </div>
+                <p class="help">{f.symbolsHelp}</p>
+              </div>
+            </dialog>
+            <div id="icon-error" hidden></div>
+          </div>
+          <LocalisedField path="otherConditions" label={f.otherConditions} type="textarea" rows={2} />
+        </section>
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-green" aria-hidden="true"><LifeBuoy /></span>{t.sections.instructions}</h2>
+          <Callout kind="warning">{f.instructionsNote}</Callout>
+          <div id="prefill-note" hidden></div>
+          <Callout kind="warning" id="prefill-edited" hidden>{f.prefillEdited}</Callout>
+          <LocalisedField path="do" label={f.do} help={f.doHelp} type="textarea" rows={4} required />
+          <LocalisedField path="doNot" label={f.doNot} help={f.doNotHelp} type="textarea" rows={4} required />
+          <LocalisedField path="carries" label={f.carries} tip={f.carriesHelp} type="textarea" rows={2} />
+        </section>
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-blue" aria-hidden="true"><Pill /></span>{t.sections.medications}</h2>
+          <Callout kind="warning">{f.medicinesNote}</Callout>
+          <div data-list="medications" class="space-y-4">
+            <template>
+              <div class="rounded-lg border border-(--bds) p-4 grid gap-4 sm:grid-cols-[1fr_1fr_1fr_auto]" data-row>
+                <div class="sm:col-span-3"><LocalisedField path="medications.{i}.name" label={f.medName} /></div>
+                <div class="sm:col-start-4 sm:row-start-1 sm:self-start sm:pt-8"><button type="button" class="btn btn-ghost btn-sm" data-remove aria-label={f.remove}><Trash2 aria-hidden="true" /></button></div>
+                <div><label class="label" for="med-{i}-dose">{f.medDose}</label><input class="input" id="med-{i}-dose" type="text" data-bind="medications.{i}.dose" placeholder="500 mg" /></div>
+                <div class="sm:col-span-2"><LocalisedField path="medications.{i}.frequency" label={f.medFrequency} /></div>
+              </div>
+            </template>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" data-add="medications"><Plus aria-hidden="true" /> {f.addMedication}</button>
+          <LocalisedField path="allergies" label={f.allergies} help={f.allergiesHelp} type="textarea" rows={2} />
+        </section>
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-violet" aria-hidden="true"><Phone /></span>{t.sections.contacts}</h2>
+          <div data-list="contacts" class="space-y-4">
+            <template>
+              <div class="rounded-lg border border-(--bds) p-4 grid gap-4 sm:grid-cols-[1fr_1fr_auto]" data-row>
+                <div><LocalisedField path="contacts.{i}.name" label={f.contactName} /></div>
+                <div><LocalisedField path="contacts.{i}.relationship" label={f.contactRelationship} /></div>
+                <div class="sm:self-start sm:pt-8"><button type="button" class="btn btn-ghost btn-sm" data-remove aria-label={f.remove}><Trash2 aria-hidden="true" /></button></div>
+                <div class="sm:col-span-2"><label class="label" for="contact-{i}-phone">{f.contactPhone}</label><input class="input" id="contact-{i}-phone" type="tel" data-bind="contacts.{i}.phone" data-phone aria-describedby="contact-{i}-phone-error" /><span class="help field-error" id="contact-{i}-phone-error" data-error-for="contacts.{i}.phone" data-phone-error hidden></span><span class="help" data-phone-help></span></div>
+              </div>
+            </template>
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm" data-add="contacts"><Plus aria-hidden="true" /> {f.addContact}</button>
+          <div class="grid gap-5 sm:grid-cols-2 pt-5 border-t border-(--bds)">
+            <div class="sm:col-span-2">
+              <div class="field-head mb-1.5">
+                <label class="label" for="country">{f.country}</label>
+                <button type="button" class="tip" id="country-note" data-tip="" aria-label={f.countryTip}><CircleHelp aria-hidden="true" /></button>
+              </div>
+              <select class="input" id="country" data-bind="emergency.country">
+                <optgroup label={f.countryCommon}>
+                  {common.map((code) => <option value={code}>{regionName.of(code)}{numberOf(code)}</option>)}
+                </optgroup>
+                <optgroup label={f.countryAll}>
+                  {allCountries.map(([code, name]) => <option value={code}>{name}{numberOf(code)}</option>)}
+                </optgroup>
+              </select>
+            </div>
+            <div>
+              <label class="label" for="emergency-general">{f.emergencyGeneral}</label>
+              <input class="input" id="emergency-general" type="text" inputmode="tel" data-bind="emergency.general" />
+            </div>
+            <div>
+              <div class="field-head mb-1.5">
+                <label class="label" for="emergency-ambulance">{f.emergencyAmbulance}</label>
+                <button type="button" class="tip" data-tip={f.emergencyAmbulanceHelp} aria-label={f.emergencyAmbulanceHelp}><CircleHelp aria-hidden="true" /></button>
+              </div>
+              <input class="input" id="emergency-ambulance" type="text" inputmode="tel" data-bind="emergency.ambulance" />
+            </div>
+          </div>
+        </section>
+
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-teal" aria-hidden="true"><Hospital /></span>{t.sections.other}</h2>
+          <LocalisedField path="hospital" label={f.hospital} />
+          <LocalisedField path="person.address" label={f.address} type="textarea" rows={2} />
+          <label class="flex items-start gap-3"><input type="checkbox" class="checkbox mt-1.5" data-bind="person.showAddress" /><span><span class="block">{f.showAddress}</span><span class="help !mt-0">{f.showAddressHelp}</span></span></label>
+        </section>
+        <section class="surface p-5 sm:p-6 space-y-5">
+          <h2 class="section-title"><span class="section-icon tone-ink" aria-hidden="true"><QrCode /></span>{t.sections.qr}</h2>
+          <label class="flex items-start gap-3"><input type="checkbox" class="checkbox mt-1.5" data-bind="qr.on" /><span><span class="block">{f.qr}</span><span class="help !mt-0">{f.qrHelp}</span></span></label>
+          <div id="qr-options" class="space-y-4">
+            <fieldset class="space-y-2">
+              <legend class="label">{f.qrInclude}</legend>
+              <label class="flex items-center gap-3"><input type="checkbox" class="checkbox" checked disabled /><span>{f.qrIncludeNumbers}</span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" class="checkbox" data-bind="qr.include.condition" /><span>{f.qrIncludeCondition}</span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" class="checkbox" data-bind="qr.include.blood" /><span>{f.qrIncludeBlood}</span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" class="checkbox" data-bind="qr.include.hospital" /><span>{f.qrIncludeHospital}</span></label>
+              <label class="flex items-center gap-3"><input type="checkbox" class="checkbox" data-bind="qr.include.address" /><span>{f.qrIncludeAddress}</span></label>
+            </fieldset>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div>
+                <div class="field-head">
+                  <label class="label" for="qr-size">{f.qrSize}</label>
+                  <button type="button" class="tip" data-tip={f.qrSizeHelp} aria-label={f.qrSizeHelp}><CircleHelp aria-hidden="true" /></button>
+                </div>
+                <select class="input" id="qr-size" data-bind="qr.size" data-type="number">
+                  <option value="14">14 mm</option>
+                  <option value="16">16 mm</option>
+                  <option value="18">18 mm</option>
+                </select>
+              </div>
+              <div>
+                <span class="label">{f.qrMeter}</span>
+                <div class="gauge" id="qr-gauge"><span></span></div>
+                <p class="help" id="qr-meter" aria-live="polite"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+
+    <section class="faq-band" aria-labelledby="faq-heading">
+      <div class="max-w-[1400px] mx-auto px-4 sm:px-6 py-12 sm:py-16 grid gap-8 lg:grid-cols-[20rem_1fr] lg:gap-16">
+        <div class="lg:sticky lg:top-8 self-start">
+          <h2 id="faq-heading" class="text-2xl font-bold tracking-tight">{t.faqHeading}</h2>
+          <p class="text-(--t3) mt-2">{t.faqIntro}</p>
+        </div>
+        <div class="max-w-[72ch]">
+          {t.faq.map((q) => (
+            <details class="faq">
+              <summary>{q.q}</summary>
+              <p>{q.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </div>
+  <script src="../scripts/main.js"></script>
+</Base>

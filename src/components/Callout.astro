@@ -1,0 +1,18 @@
+---
+/**
+ * A callout: an icon, a coloured edge, and a tinted ground. Four kinds.
+ * `id` and `hidden` let scripts fill and show it later. Scripts that build
+ * their own use calloutHtml() in src/scripts/callout.js, which emits the
+ * same markup.
+ */
+import { Info, TriangleAlert, CircleCheck, OctagonAlert } from '@lucide/astro';
+const { kind = 'info', id, hidden = false, title } = Astro.props;
+const Icon = { info: Info, warning: TriangleAlert, success: CircleCheck, danger: OctagonAlert }[kind];
+---
+<div class={`callout callout-${kind}`} id={id} hidden={hidden} role={kind === 'danger' ? 'alert' : undefined}>
+  <Icon class="callout-icon" aria-hidden="true" />
+  <div class="callout-body">
+    {title && <p class="callout-title">{title}</p>}
+    <slot />
+  </div>
+</div>

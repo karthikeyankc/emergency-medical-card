@@ -1,0 +1,25 @@
+# Emergency Medical Card
+
+> A free, private tool that makes an emergency medical card, also called a medical ID card. The card shows the person's condition, what to do and what not to do, their medicines, allergies, and who to call. It runs entirely in the browser, and nothing the person types is sent anywhere.
+
+Also called a medical alert card, medical wallet card, emergency information card, or ICE (In Case of Emergency) card. It is not a government health card such as Ireland's medical card or India's ABHA card.
+
+Made by Karthikeyan KC (https://github.com/KarthikeyanKC). Open source under the MIT licence. Source: https://github.com/KarthikeyanKC/emergency-medical-card. Built with AI tools, disclosed in AI.md in the repository.
+
+## Key facts
+- Sizes. An ID-1 wallet card at 85.6 × 54 mm, the size of a bank card. An ID-2 pocket card at 105 × 74 mm with larger type. A 1080 × 2400 px phone lock screen image that shows without unlocking the phone.
+- Downloads. A print-ready vector PDF for a print shop, with every letter as an outline. An A4 or Letter sheet to print at home, then cut, fold, and laminate. A PNG per side at 300 or 600 dpi, with the physical size recorded in the file. An SVG per side, and a backup file.
+- Emergency numbers for 117 countries, each checked against a named public source.
+- Languages. One language, or two with one on each side, from 47 languages. Complex scripts such as Tamil, Hindi, Bengali, and Thai are shaped with HarfBuzz. Card headings other than English were translated with AI and have not yet been checked by native speakers, and the editor says so.
+- Suggested DO and DO NOT text for 20 conditions, drafted with AI from named public first aid pages (NHS, Diabetes UK, Asthma + Lung UK, Epilepsy Action, Alzheimer's Society, National Autistic Society, and British Heart Foundation). Not reviewed by a clinician. Users are told to check the wording with their doctor.
+- An optional QR code that saves the emergency contact numbers to the scanner's phone, with the condition, blood group, hospital, and address if chosen.
+- Emblem choice. Red cross (default), Rod of Asclepius, or none.
+- Privacy. No account, cookies, or tracking script, and nothing typed is sent anywhere. The card is saved in the browser's own storage, and a backup file can be saved and loaded on another device.
+
+## Pages
+- / : the card maker
+- /privacy : what happens to the details a person types
+- /terms : terms of use, not medical advice, and licence
+
+## Not
+- It isn't medical advice or a medical alert service, and it doesn't replace emergency services.

@@ -1,0 +1,25 @@
+name: Add or correct a condition
+description: Suggest a condition for the catalogue, or a fix to its suggested DO and DO NOT text.
+labels: [catalogue]
+body:
+  - type: input
+    id: condition
+    attributes:
+      label: Condition
+      description: Its name, and its Wikidata id if you know it.
+      placeholder: Haemophilia (Q134003)
+    validations:
+      required: true
+  - type: textarea
+    id: text
+    attributes:
+      label: Suggested DO and DO NOT
+      description: Short lines a stranger can follow. Under DO NOT, each line finishes the heading, so write "Give me aspirin", not "Do not give me aspirin".
+  - type: input
+    id: source
+    attributes:
+      label: Public first aid source
+      description: Suggested text is only accepted with a named public source, such as an NHS page or a national charity.
+      placeholder: https://
+    validations:
+      required: true

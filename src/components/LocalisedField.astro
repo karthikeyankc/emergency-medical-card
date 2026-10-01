@@ -1,0 +1,35 @@
+---
+/**
+ * A text field that exists per card language. The English input is always
+ * shown. The second-language input appears in bilingual mode, bound by
+ * form.js to whichever language is chosen, with a "same as English"
+ * checkbox that stores null for that language.
+ *
+ * `path` is the state path without the language, e.g. `person.name`.
+ * Inside a list template, use `{i}` for the row index.
+ */
+import ui from '../data/i18n/ui/en.json';
+import { CircleHelp } from '@lucide/astro';
+const { path, label, help, tip, type = 'text', rows = 3, required = false, inputmode, list } = Astro.props;
+const id = path.replace(/[^a-z0-9]+/gi, '-');
+const Tag = type === 'textarea' ? 'textarea' : 'input';
+---
+<div class="space-y-1">
+  {tip
+    ? <div class="field-head"><label class="label" for={`${id}-en`}>{label}</label><button type="button" class="tip" data-tip={tip} aria-label={tip}><CircleHelp aria-hidden="true" /></button></div>
+    : <label class="label" for={`${id}-en`}>{label}</label>}
+  {type === 'textarea'
+    ? <textarea class="input" id={`${id}-en`} data-bind={`${path}.en`} rows={rows} required={required}></textarea>
+    : <input class="input" id={`${id}-en`} type="text" data-bind={`${path}.en`} required={required} inputmode={inputmode} list={list} autocomplete="off" />}
+  {help && <span class="help">{help}</span>}
+  <div data-second-language hidden class="mt-3 pl-4 border-l-2 border-(--bds) space-y-2">
+    <label class="flex items-center gap-2 text-base">
+      <input type="checkbox" class="checkbox" data-same-second={path} checked />
+      <span data-first-label>{ui.fields.sameAsEnglish}</span>
+    </label>
+    <label class="label" for={`${id}-ta`}><span data-second-label>Second language</span></label>
+    {type === 'textarea'
+      ? <textarea class="input" id={`${id}-ta`} data-bind-second={path} rows={rows}></textarea>
+      : <input class="input" id={`${id}-ta`} type="text" data-bind-second={path} autocomplete="off" />}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+{
+  "_reviewed": true,
+  "language": "English",
+  "alert": "Emergency medical information",
+  "condition": "Condition",
+  "name": "Name",
+  "born": "Born",
+  "do": "Do",
+  "doNot": "Do not",
+  "carries": "I carry",
+  "medications": "Medications",
+  "allergies": "Allergies",
+  "noneKnown": "None known",
+  "none": "None",
+  "contacts": "Emergency contacts",
+  "hospital": "Preferred hospital",
+  "otherConditions": "Other conditions",
+  "bloodGroup": "Blood group",
+  "emergency": "Emergency number",
+  "ambulance": "Ambulance",
+  "address": "Address",
+  "updated": "Updated"
+}

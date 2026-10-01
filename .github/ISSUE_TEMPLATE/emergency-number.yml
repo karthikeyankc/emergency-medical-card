@@ -1,0 +1,27 @@
+name: Correct an emergency number
+description: A country's emergency or ambulance number is wrong or missing.
+labels: [emergency-number]
+body:
+  - type: input
+    id: country
+    attributes:
+      label: Country
+      placeholder: Kenya (KE)
+    validations:
+      required: true
+  - type: input
+    id: numbers
+    attributes:
+      label: The right numbers
+      description: The one number to call for an ambulance, and a second ambulance-only number if the country has one.
+      placeholder: 999, and 112 from a mobile
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source
+      description: A government, regulator, or emergency service page that states the numbers. Travel advice pages from a foreign ministry are fine.
+      placeholder: https://
+    validations:
+      required: true

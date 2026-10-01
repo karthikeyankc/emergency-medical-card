@@ -1,0 +1,27 @@
+name: Check a translation
+description: You read a language natively and want to check or fix the card's headings.
+labels: [translation]
+body:
+  - type: input
+    id: language
+    attributes:
+      label: Language
+      description: The language you read natively, and its code from src/data/languages.json if you know it.
+      placeholder: Tamil (ta)
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Open the site, pick your language in the **Language** menu above the card, and read the headings on the preview. The card prints them in capitals, so check how they look there and not only in `src/data/i18n/card/<code>.json`. A file a native speaker has checked is marked `_reviewed: true`.
+  - type: textarea
+    id: corrections
+    attributes:
+      label: What's wrong, and what it should say
+      description: One heading per line. Leave it empty if everything reads correctly.
+  - type: checkboxes
+    id: verdict
+    attributes:
+      label: Verdict
+      options:
+        - label: Every heading reads correctly and naturally, so this file can be marked reviewed.

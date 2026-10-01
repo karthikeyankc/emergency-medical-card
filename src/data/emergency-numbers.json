@@ -1,0 +1,707 @@
+{
+  "_note": "ISO 3166-1 alpha-2 to numbers. `general` is the one number to call for an ambulance. `ambulance` is a second, ambulance-only number where the country has one, and null otherwise. Both are digits only, as the card prints them. `source` is the public page the entry was checked against, and `lastVerified` is the date someone checked it. Countries not listed are offered in the editor with no number, and the person types it in.",
+  "IN": {
+    "general": "112",
+    "ambulance": "108",
+    "source": "https://www.gov.uk/foreign-travel-advice/india/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "GB": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/guidance/999-and-112-the-uks-national-emergency-numbers",
+    "lastVerified": "2026-09-25",
+    "notes": "112 also works"
+  },
+  "IE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://112.ie/making-an-emergency-call/",
+    "lastVerified": "2026-09-25"
+  },
+  "US": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/usa/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "CA": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/canada/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MX": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/mexico/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "AU": {
+    "general": "000",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/australia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "NZ": {
+    "general": "111",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/new-zealand/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "SG": {
+    "general": "995",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/singapore/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MY": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/malaysia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "HK": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/hong-kong/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MO": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/macao/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "JP": {
+    "general": "119",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/japan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "KR": {
+    "general": "119",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/south-korea/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "CN": {
+    "general": "120",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/china/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "TW": {
+    "general": "119",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/taiwan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "TH": {
+    "general": "1669",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/thailand/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "VN": {
+    "general": "115",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/vietnam/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "ID": {
+    "general": "112",
+    "ambulance": "119",
+    "source": "https://kemkes.go.id/id/akses-darurat-medis-119-kini-bisa-melalui-satusehat-mobile",
+    "lastVerified": "2026-09-25"
+  },
+  "PH": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/philippines/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "KH": {
+    "general": "119",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/cambodia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MM": {
+    "general": "192",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/myanmar/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "LK": {
+    "general": "1990",
+    "ambulance": null,
+    "source": "https://www.1990.lk/",
+    "lastVerified": "2026-09-25"
+  },
+  "BD": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bangladesh/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "NP": {
+    "general": "102",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/nepal/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "PK": {
+    "general": "1122",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/pakistan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "BT": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bhutan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MV": {
+    "general": "102",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/maldives/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "AF": {
+    "general": "119",
+    "ambulance": "102",
+    "source": "https://travel.gc.ca/destinations/afghanistan",
+    "lastVerified": "2026-09-25"
+  },
+  "AE": {
+    "general": "998",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/united-arab-emirates/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "SA": {
+    "general": "911",
+    "ambulance": "997",
+    "source": "https://www.cst.gov.sa/en/about/Numbering",
+    "lastVerified": "2026-09-25"
+  },
+  "QA": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/qatar/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "BH": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bahrain/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "KW": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/kuwait/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "OM": {
+    "general": "9999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/oman/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "JO": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/jordan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "IL": {
+    "general": "101",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/israel/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "TR": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/turkey/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "IR": {
+    "general": "115",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/iran/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "IQ": {
+    "general": "122",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/iraq/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "LB": {
+    "general": "140",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/lebanon/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "EG": {
+    "general": "123",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/egypt/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "ZA": {
+    "general": "112",
+    "ambulance": "10177",
+    "source": "https://www.gov.uk/foreign-travel-advice/south-africa/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "KE": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/kenya/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "NG": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/nigeria/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "GH": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://nas.gov.gh/contact.php",
+    "lastVerified": "2026-09-25"
+  },
+  "TZ": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://en.wikipedia.org/wiki/Telephone_numbers_in_Tanzania",
+    "lastVerified": "2026-09-25",
+    "notes": "The ambulance number is not yet confirmed by an official source."
+  },
+  "UG": {
+    "general": "999",
+    "ambulance": null,
+    "source": "https://upf.go.ug/national-emergence-toll-free-numbers-for-public-safety/",
+    "lastVerified": "2026-09-25"
+  },
+  "ET": {
+    "general": "907",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/ethiopia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "RW": {
+    "general": "112",
+    "ambulance": "912",
+    "source": "https://www.rbc.gov.rw/who-we-are/our-divisions-and-units/samu-services",
+    "lastVerified": "2026-09-25"
+  },
+  "MA": {
+    "general": "15",
+    "ambulance": null,
+    "source": "https://ma.diplomatie.gouv.fr/fr/urgence",
+    "lastVerified": "2026-09-25"
+  },
+  "DZ": {
+    "general": "14",
+    "ambulance": null,
+    "source": "https://dz.diplomatie.gouv.fr/fr/urgence",
+    "lastVerified": "2026-09-25"
+  },
+  "TN": {
+    "general": "190",
+    "ambulance": null,
+    "source": "https://www.diplomatie.gouv.fr/fr/information-par-pays/tunisie/conseils-aux-voyageurs-contacts-utiles",
+    "lastVerified": "2026-09-25"
+  },
+  "BR": {
+    "general": "192",
+    "ambulance": null,
+    "source": "https://www.gov.br/saude/pt-br/composicao/saes/samu-192",
+    "lastVerified": "2026-09-25"
+  },
+  "AR": {
+    "general": "911",
+    "ambulance": "107",
+    "source": "https://www.argentina.gob.ar/tema/emergencias",
+    "lastVerified": "2026-09-25"
+  },
+  "CL": {
+    "general": "131",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/chile/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "CO": {
+    "general": "123",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/colombia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "PE": {
+    "general": "106",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/peru/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "EC": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/ecuador/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "VE": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/venezuela/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "BO": {
+    "general": "118",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bolivia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "UY": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/uruguay/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "PY": {
+    "general": "911",
+    "ambulance": "141",
+    "source": "https://www.gov.uk/foreign-travel-advice/paraguay/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "CR": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.911.go.cr/",
+    "lastVerified": "2026-09-25"
+  },
+  "PA": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/panama/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "DO": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/dominican-republic/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "JM": {
+    "general": "110",
+    "ambulance": null,
+    "source": "https://www.jcf.gov.jm/",
+    "lastVerified": "2026-09-25"
+  },
+  "TT": {
+    "general": "811",
+    "ambulance": null,
+    "source": "https://health.gov.tt/services/ambulance-and-transport-services",
+    "lastVerified": "2026-09-25"
+  },
+  "RU": {
+    "general": "112",
+    "ambulance": "103",
+    "source": "https://www.gov.uk/foreign-travel-advice/russia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "UA": {
+    "general": "112",
+    "ambulance": "103",
+    "source": "https://www.gov.uk/foreign-travel-advice/ukraine/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "KZ": {
+    "general": "112",
+    "ambulance": "103",
+    "source": "https://www.gov.uk/foreign-travel-advice/kazakhstan/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "UZ": {
+    "general": "112",
+    "ambulance": "103",
+    "source": "https://tashkent.uz/en/news/tashkent-listening/emergency-phone-numbers",
+    "lastVerified": "2026-09-25"
+  },
+  "GE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/georgia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "AM": {
+    "general": "911",
+    "ambulance": "103",
+    "source": "https://www.yerevan.am/en/hot-line/",
+    "lastVerified": "2026-09-25"
+  },
+  "AZ": {
+    "general": "112",
+    "ambulance": "103",
+    "source": "https://fhn.gov.az/en/education/112-call-center",
+    "lastVerified": "2026-09-25"
+  },
+  "MN": {
+    "general": "103",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/mongolia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "AT": {
+    "general": "112",
+    "ambulance": "144",
+    "source": "https://www.oesterreich.gv.at/themen/notfaelle_unfaelle_und_kriminalitaet/notrufnummern.html",
+    "lastVerified": "2026-09-25"
+  },
+  "BE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.112.be/en/",
+    "lastVerified": "2026-09-25"
+  },
+  "BG": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bulgaria/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "HR": {
+    "general": "112",
+    "ambulance": "194",
+    "source": "https://gov.hr/hr/194-hitna-medicinska-sluzba/1186",
+    "lastVerified": "2026-09-25"
+  },
+  "CY": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/cyprus/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "CZ": {
+    "general": "112",
+    "ambulance": "155",
+    "source": "https://www.nzip.cz/clanek/205-zdravotnicka-zachranna-sluzba",
+    "lastVerified": "2026-09-25"
+  },
+  "DK": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "EE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "FI": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "FR": {
+    "general": "112",
+    "ambulance": "15",
+    "source": "https://www.service-public.gouv.fr/particuliers/vosdroits/F33954",
+    "lastVerified": "2026-09-25"
+  },
+  "DE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/germany/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "GR": {
+    "general": "112",
+    "ambulance": "166",
+    "source": "https://eu-healthcare.eopyy.gov.gr/en/healthcare-in-greece/accessing-health-services-in-greece-for-eu-citizens/emergency-care-for-ehic-holders/",
+    "lastVerified": "2026-09-25"
+  },
+  "HU": {
+    "general": "112",
+    "ambulance": "104",
+    "source": "https://nmhh.hu/cikk/188545/Segelyhivo_szamok",
+    "lastVerified": "2026-09-25"
+  },
+  "IT": {
+    "general": "112",
+    "ambulance": "118",
+    "source": "https://www.gov.uk/foreign-travel-advice/italy/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "LV": {
+    "general": "112",
+    "ambulance": "113",
+    "source": "https://www.nmpd.gov.lv/lv/kad-zvanit-113",
+    "lastVerified": "2026-09-25"
+  },
+  "LT": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/lithuania/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "LU": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/luxembourg/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MT": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "NL": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "PL": {
+    "general": "112",
+    "ambulance": "999",
+    "source": "https://pacjent.gov.pl/pogotowie-i-numer-alarmowy",
+    "lastVerified": "2026-09-25"
+  },
+  "PT": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "RO": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "SK": {
+    "general": "112",
+    "ambulance": "155",
+    "source": "https://www.gov.uk/foreign-travel-advice/slovakia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "SI": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/slovenia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "ES": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://administracion.gob.es/en/tu-espacio-europeo/derechos-obligaciones/ciudadanos/asistencia-sanitaria/numeros-urgencia",
+    "lastVerified": "2026-09-25"
+  },
+  "SE": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://digital-strategy.ec.europa.eu/en/policies/112",
+    "lastVerified": "2026-09-25"
+  },
+  "NO": {
+    "general": "112",
+    "ambulance": "113",
+    "source": "https://nkom.no/telefoni-og-telefonnummer/nodnummer-nodanrop-og-lokalisering",
+    "lastVerified": "2026-09-25"
+  },
+  "CH": {
+    "general": "112",
+    "ambulance": "144",
+    "source": "https://www.gov.uk/foreign-travel-advice/switzerland/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "IS": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://www.112.is/en",
+    "lastVerified": "2026-09-25"
+  },
+  "LI": {
+    "general": "112",
+    "ambulance": "144",
+    "source": "https://www.landespolizei.li/notrufnummern",
+    "lastVerified": "2026-09-25"
+  },
+  "RS": {
+    "general": "112",
+    "ambulance": "194",
+    "source": "https://www.gov.uk/foreign-travel-advice/serbia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "BA": {
+    "general": "124",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/bosnia-and-herzegovina/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "MK": {
+    "general": "194",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/north-macedonia/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "AL": {
+    "general": "127",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/albania/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "ME": {
+    "general": "112",
+    "ambulance": "124",
+    "source": "https://hitna.me/en/kontakt/",
+    "lastVerified": "2026-09-25"
+  },
+  "MD": {
+    "general": "112",
+    "ambulance": null,
+    "source": "https://old.gov.md/en/content/single-service-112-emergency-calls-becomes-active-moldova",
+    "lastVerified": "2026-09-25"
+  },
+  "BY": {
+    "general": "103",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/belarus/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "FJ": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/fiji/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "PG": {
+    "general": "111",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/papua-new-guinea/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "WS": {
+    "general": "911",
+    "ambulance": null,
+    "source": "https://www.gov.uk/foreign-travel-advice/samoa/getting-help",
+    "lastVerified": "2026-09-25"
+  },
+  "TO": {
+    "general": "911",
+    "ambulance": "933",
+    "source": "https://www.gov.uk/foreign-travel-advice/tonga/getting-help",
+    "lastVerified": "2026-09-25"
+  }
+}

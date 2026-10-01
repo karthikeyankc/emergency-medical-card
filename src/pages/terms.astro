@@ -1,0 +1,30 @@
+---
+import Base from '../layouts/Base.astro';
+import Legal from '../components/Legal.astro';
+const title = 'Terms of use · Emergency Medical Card';
+const description = 'Terms for using Emergency Medical Card. Not medical advice. Provided free and as is.';
+---
+<Base title={title} description={description} path="/terms">
+  <Legal heading="Terms of use" updated="25 September 2026">
+    <h2>What this tool is</h2>
+    <p>This is a free tool that helps you lay out a card describing a medical condition, what to do in an emergency, and who to call, for your wallet or your phone's lock screen. It only arranges your words on a card and gives you files to print or save.</p>
+
+    <h2>It is not medical advice</h2>
+    <p>Nothing on this site is medical advice, and the author is not a medical professional. Suggested wording for some conditions is general first aid guidance taken from the public pages named beside it. It has not been reviewed by a clinician and may not suit you. Check everything you put on a card with your doctor before you print it, especially anything about medicines or doses.</p>
+
+    <h2>Your card is your responsibility</h2>
+    <p>You decide what the card says. You are responsible for its accuracy, for keeping it up to date when your medicines or contacts change, and for how it is used. A card does not replace a medical alert service, a doctor, or emergency services.</p>
+
+    <h2>Warranty and liability</h2>
+    <p>The tool is provided as is and as available, without warranty of any kind, express or implied, including fitness for a particular purpose. To the fullest extent the law allows, the author accepts no liability for any loss, injury, or harm arising from use of the tool, from a card made with it, or from reliance on any suggested text.</p>
+
+    <h2>Emblems</h2>
+    <p>The red cross is a protected emblem under the Geneva Conventions and national law, including India's Geneva Conventions Act 1960. The tool offers it because it is the symbol most people recognise for medical help. It also offers the Rod of Asclepius, or no emblem. The choice, and any consequence of it, is yours.</p>
+
+    <h2>Licence</h2>
+    <p>The code is published under the MIT licence. You may use it, change it, and share it. Fonts, icons, and symbols carry their own licences, listed in the project's NOTICE file.</p>
+
+    <h2>Changes</h2>
+    <p>These terms may change as the tool changes. The date at the top says when they were last updated.</p>
+  </Legal>
+</Base>

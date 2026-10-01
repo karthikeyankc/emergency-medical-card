@@ -1,0 +1,18 @@
+name: Something's broken
+description: The card draws wrong, a download fails, or the page misbehaves.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what you expected
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Safari 19 on an iPhone 16
+  - type: markdown
+    attributes:
+      value: Please don't paste real medical details. A made-up card that shows the problem is enough, and a saved copy of it helps most.

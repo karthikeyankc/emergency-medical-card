@@ -1,0 +1,1122 @@
+{
+  "generatedAt": "2026-09-24",
+  "languages": [
+    "en",
+    "ta"
+  ],
+  "conditions": [
+    {
+      "id": "type-1-diabetes",
+      "wikidata": "Q124407",
+      "name": {
+        "en": "Type 1 diabetes",
+        "ta": "வகை 1 நீரிழிவு"
+      },
+      "aliases": {
+        "en": [
+          "T1D",
+          "IDDM",
+          "Insulin-dependent diabetes",
+          "insulin-dependent diabetes mellitus",
+          "type I diabetes mellitus",
+          "T1DM",
+          "insulin dependent diabetes",
+          "juvenile diabetes",
+          "diabetes mellitus juvenile type",
+          "DIABETES MELLITUS, INSULIN-DEPENDENT; IDDM",
+          "Diabetes Mellitus, Type 1",
+          "Diabetes Mellitus, Insulin-Dependent, 1",
+          "DIABETES MELLITUS, INSULIN-DEPENDENT",
+          "Juvenile-Onset Diabetes",
+          "Insulin-Dependent Diabetes Mellitus 1",
+          "diabetes (type 1)",
+          "type 1 diabetes mellitus"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "If I'm confused, sweaty, or shaky, give me sugar: juice, a sugary drink, or glucose tablets.",
+            "If I'm not better in 15 minutes, give more sugar and call an ambulance.",
+            "If I pass out, put me on my side and call an ambulance."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Give me insulin.",
+            "Give food or drink if I can't swallow or I'm unconscious."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Low blood sugar (hypoglycaemia)",
+            "url": "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "Diabetes UK",
+            "title": "Hypos",
+            "url": "https://www.diabetes.org.uk/about-diabetes/complications/hypos",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "type-2-diabetes",
+      "wikidata": "Q3025883",
+      "name": {
+        "en": "Type 2 diabetes",
+        "ta": "நீரிழிவு நோய் (இரண்டாவது வகை)"
+      },
+      "aliases": {
+        "en": [
+          "T2D",
+          "NIDDM",
+          "non-insulin-dependent diabetes mellitus",
+          "type II diabetes mellitus",
+          "type 2 diabetes mellitus",
+          "diabetes (type 2)",
+          "adult-onset diabetes",
+          "diabetes mellitus type 2",
+          "rare insulin-independent diabetes mellitus",
+          "diabetes Mellitus, Type 2"
+        ],
+        "ta": [
+          "இரண்டாவது வகை நீரிழிவு"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "If I'm confused, sweaty, or shaky, give me sugar: juice, a sugary drink, or glucose tablets.",
+            "If I'm not better in 15 minutes, give more sugar and call an ambulance.",
+            "If I pass out, put me on my side and call an ambulance."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Give me insulin.",
+            "Give food or drink if I can't swallow or I'm unconscious."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Low blood sugar (hypoglycaemia)",
+            "url": "https://www.nhs.uk/conditions/low-blood-sugar-hypoglycaemia/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "Diabetes UK",
+            "title": "Hypos",
+            "url": "https://www.diabetes.org.uk/about-diabetes/complications/hypos",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "epilepsy",
+      "wikidata": "Q41571",
+      "name": {
+        "en": "Epilepsy",
+        "ta": "கால்-கை வலிப்பு"
+      },
+      "aliases": {
+        "en": [
+          "Seizure disorder",
+          "epilepsy syndrome",
+          "epileptic syndrome",
+          "epileptiform",
+          "caducus morbus",
+          "morbus comitialis",
+          "Saint Valentine's malady",
+          "seizure disorder"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Cushion my head and move hard objects away.",
+            "Time the seizure. Call an ambulance if it lasts over 5 minutes or I don't wake up.",
+            "When it stops, roll me on my side and stay with me until I'm fully awake."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Hold me down.",
+            "Put anything in my mouth.",
+            "Give me food or drink until I'm fully awake."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Epilepsy",
+            "url": "https://www.nhs.uk/conditions/epilepsy/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "Epilepsy Action",
+            "title": "First aid for seizures",
+            "url": "https://www.epilepsy.org.uk/info/firstaid",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "asthma",
+      "wikidata": "Q35869",
+      "name": {
+        "en": "Asthma",
+        "ta": "ஈழை நோய்"
+      },
+      "aliases": {
+        "en": [
+          "exercise-induced asthma",
+          "chronic obstructive asthma",
+          "chronic obstructive asthma with status asthmaticus",
+          "chronic obstructive asthma with acute exacerbation",
+          "bronchial hyperreactivity",
+          "Exercise induced asthma",
+          "Asthma",
+          "asthma brionchiole"
+        ],
+        "ta": [
+          "ஆஸ்த்துமா",
+          "மூச்சுத்தடை நோய்",
+          "ஈழைநோய்"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Sit me upright and help me stay calm.",
+            "Help me take my reliever inhaler, usually blue. One puff every 30 to 60 seconds, up to 10 puffs.",
+            "Call an ambulance if I'm not better after 10 puffs or I'm getting worse."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Lie me down.",
+            "Leave me alone."
+          ]
+        },
+        "sources": [
+          {
+            "org": "Asthma + Lung UK",
+            "title": "Asthma attacks",
+            "url": "https://www.asthmaandlung.org.uk/conditions/asthma/asthma-attacks",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "anaphylaxis",
+      "wikidata": "Q168800",
+      "name": {
+        "en": "Anaphylaxis",
+        "ta": "ஆனபிலாக்சிஸ்"
+      },
+      "aliases": {
+        "en": [
+          "Severe allergy",
+          "anaphylactic reaction"
+        ],
+        "ta": [
+          "ஆனபிலாக்சிஸ் எதிர்வினை",
+          "ஆனபிலாக்சிஸ் அதிர்ச்சி"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Use my adrenaline pen on my outer thigh, through clothing if needed.",
+            "Call an ambulance and say anaphylaxis.",
+            "Lie me down with my legs raised. If breathing is hard, sit me up.",
+            "Give a second pen after 5 minutes if I'm not better."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Let me stand or walk, even if I feel better."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Anaphylaxis",
+            "url": "https://www.nhs.uk/conditions/anaphylaxis/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "hypertension",
+      "wikidata": "Q41861",
+      "name": {
+        "en": "High blood pressure",
+        "ta": "உயர் இரத்த அழுத்தம்"
+      },
+      "aliases": {
+        "en": [
+          "Hypertension",
+          "high blood pressure",
+          "\"the silent killer\"",
+          "hypertension",
+          "increased blood pressure"
+        ],
+        "ta": []
+      }
+    },
+    {
+      "id": "heart-failure",
+      "wikidata": "Q181754",
+      "name": {
+        "en": "Heart failure",
+        "ta": "குருதித்தேக்க இதயத் திறனிழப்பு"
+      },
+      "aliases": {
+        "en": [
+          "HF",
+          "congestive heart failure",
+          "congestive cardiac failure",
+          "cardiac failure",
+          "CF",
+          "cardiac insufficiency",
+          "Cardiovascular insufficiency"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "For chest pain, sit me down and call an ambulance.",
+            "Help me take my GTN spray if I have one."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Let me walk around."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Heart attack",
+            "url": "https://www.nhs.uk/conditions/heart-attack/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "British Heart Foundation",
+            "title": "Heart attack",
+            "url": "https://www.bhf.org.uk/informationsupport/conditions/heart-attack",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "atrial-fibrillation",
+      "wikidata": "Q815819",
+      "name": {
+        "en": "Atrial fibrillation",
+        "ta": "ஏட்ரியல் ஃபிப்ரிலேஷன்"
+      },
+      "aliases": {
+        "en": [
+          "AFib",
+          "A-fib",
+          "AF"
+        ],
+        "ta": []
+      }
+    },
+    {
+      "id": "coronary-artery-disease",
+      "wikidata": "Q844935",
+      "name": {
+        "en": "Coronary artery disease",
+        "ta": "குருதி ஊட்டக்குறை இதய நோய்"
+      },
+      "aliases": {
+        "en": [
+          "Heart disease"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "For chest pain, sit me down and call an ambulance.",
+            "Help me take my GTN spray if I have one."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Let me walk around."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Heart attack",
+            "url": "https://www.nhs.uk/conditions/heart-attack/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "British Heart Foundation",
+            "title": "Heart attack",
+            "url": "https://www.bhf.org.uk/informationsupport/conditions/heart-attack",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "stroke",
+      "wikidata": "Q12202",
+      "name": {
+        "en": "Stroke",
+        "ta": "பக்கவாதம்"
+      },
+      "aliases": {
+        "en": [
+          "CVA",
+          "CVI",
+          "brain attack",
+          "embolic stroke",
+          "cerebrovascular insult",
+          "cerebrovascular disorder",
+          "cerebrovascular accident",
+          "cerebral vascular accident",
+          "cerebro-vascular accident",
+          "ictus",
+          "Ictal",
+          "cerebrovascular stroke",
+          "brain vascular attack",
+          "cerebrovascular apoplexy",
+          "apoplexy",
+          "cerebral hemorrhage"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Call an ambulance at once if my face droops, an arm is weak, or my speech is slurred.",
+            "Note the time it started and tell the paramedics.",
+            "Keep me still and calm until help arrives."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Give me food, drink, or medicine.",
+            "Drive me yourself if an ambulance can come."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Stroke symptoms",
+            "url": "https://www.nhs.uk/conditions/stroke/symptoms/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "chronic-kidney-disease",
+      "wikidata": "Q736715",
+      "name": {
+        "en": "Chronic kidney disease",
+        "ta": "நெடுநாள் சிறுநீரகக் கோளாறு"
+      },
+      "aliases": {
+        "en": [
+          "CKD",
+          "Kidney failure",
+          "chronic renal disease",
+          "CRD",
+          "chronic renal failure syndrome (disorder)",
+          "renal failure - chronic",
+          "chronic renal failure syndrome",
+          "kidney failure, chronic",
+          "CRF - Chronic Renal Failure",
+          "Chronic Renal Failure Disease",
+          "Chronic Renal Failure",
+          "Renal Insufficiency, Chronic",
+          "chronic kidney disease"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Tell medics I'm on dialysis.",
+            "Use my other arm for blood pressure or needles. My dialysis arm has a fistula."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Take blood pressure or put needles in my fistula arm."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Dialysis, side effects",
+            "url": "https://www.nhs.uk/conditions/dialysis/side-effects/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "haemophilia",
+      "wikidata": "Q134003",
+      "name": {
+        "en": "Hemophilia",
+        "ta": "குருதி உறையாமை"
+      },
+      "aliases": {
+        "en": [
+          "Hemophilia",
+          "haemophilia",
+          "Hemophilia (disorder)",
+          "Hemophilia NOS",
+          "hemophiliac",
+          "Haemophilia",
+          "obsolete hemophilia"
+        ],
+        "ta": [
+          "இரத்தம் உறையாமை",
+          "இரத்த உறையாமை"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "For bleeding, press firmly on the wound and raise it.",
+            "Call an ambulance for any head, neck, or stomach injury, even with no visible bleeding.",
+            "Tell medics I have haemophilia and need clotting factor."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Give me aspirin or ibuprofen."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Haemophilia",
+            "url": "https://www.nhs.uk/conditions/haemophilia/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "sickle-cell-disease",
+      "wikidata": "Q185034",
+      "name": {
+        "en": "Sickle cell disease",
+        "ta": "அரிவாள் செல் நோய்"
+      },
+      "aliases": {
+        "en": [
+          "SCD",
+          "SCA",
+          "Sickle cell anemia",
+          "Anemia, Sickle Cell",
+          "Sickle cell disease",
+          "sickle cell disorder",
+          "sickle cell"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Call an ambulance for sudden severe pain, chest pain, or trouble breathing.",
+            "Keep me warm and give me water if I can drink.",
+            "Tell medics I have sickle cell disease."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Let me get cold."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Sickle cell disease",
+            "url": "https://www.nhs.uk/conditions/sickle-cell-disease/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "copd",
+      "wikidata": "Q199804",
+      "name": {
+        "en": "Chronic obstructive pulmonary disease",
+        "ta": "நெடுங்கால சுவாச அடைப்பு நோய்"
+      },
+      "aliases": {
+        "en": [
+          "Chronic obstructive pulmonary disease",
+          "COPD",
+          "chronic obstructive airway disease",
+          "chronic obstructive airways disease NOS",
+          "chronic obstructive lung disease",
+          "chronic obstructive airways disease NOS disorder",
+          "chronic obstructive lung disease disorder",
+          "COLD",
+          "COLD (chronic obstructive lung disease)",
+          "Chronic Obstructive Pulmonary Disease, (COPD)",
+          "Pulmonary Disease (COPD), Chronic Obstructive",
+          "Obstructive Pulmonary Disease (COPD), Chronic",
+          "Chronic Obstructive Airways Disease",
+          "Disease (COPD), Chronic Obstructive",
+          "Chronic Obstructive Pulmonary Disease (COPD)",
+          "obstructive lung disease, chronic",
+          "COPD, Chronic Obstructive Pulmonary Disease",
+          "Pulmonary Disease, Chronic Obstructive"
+        ],
+        "ta": [
+          "சிஓபிடி"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Sit me upright and help me take slow breaths.",
+            "Help me use my reliever inhaler.",
+            "Call an ambulance if my lips go blue or I can't speak in sentences."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Lie me flat."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Chronic obstructive pulmonary disease (COPD)",
+            "url": "https://www.nhs.uk/conditions/chronic-obstructive-pulmonary-disease-copd/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "alzheimers-disease",
+      "wikidata": "Q11081",
+      "name": {
+        "en": "Alzheimer's disease",
+        "ta": "ஆல்சைமர் நோய்"
+      },
+      "aliases": {
+        "en": [
+          "Alzheimer",
+          "Alzheimers",
+          "AD",
+          "Alzheimer disease",
+          "Alzheimer's dementia",
+          "Alzheimers dementia",
+          "Alzheimer disease, familial",
+          "Alzheimer dementia",
+          "Alzheimer's Disease",
+          "Alzheimers disease",
+          "Alzheimer’s Disease"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Speak slowly and calmly. One short question at a time.",
+            "Tell me your name and where I am.",
+            "Call my emergency contact. I may be lost."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Argue with me or rush me.",
+            "Leave me alone in a public place."
+          ]
+        },
+        "sources": [
+          {
+            "org": "Alzheimer's Society",
+            "title": "Tips for communicating with a person with dementia",
+            "url": "https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/symptoms/tips-for-communicating-dementia",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "NHS",
+            "title": "Dementia",
+            "url": "https://www.nhs.uk/conditions/dementia/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "dementia",
+      "wikidata": "Q83030",
+      "name": {
+        "en": "Dementia",
+        "ta": "மறதிநோய்"
+      },
+      "aliases": {
+        "en": [
+          "senility",
+          "rare dementia"
+        ],
+        "ta": [
+          "முதுமை மறதி"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Speak slowly and calmly. One short question at a time.",
+            "Tell me your name and where I am.",
+            "Call my emergency contact. I may be lost."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Argue with me or rush me.",
+            "Leave me alone in a public place."
+          ]
+        },
+        "sources": [
+          {
+            "org": "Alzheimer's Society",
+            "title": "Tips for communicating with a person with dementia",
+            "url": "https://www.alzheimers.org.uk/about-dementia/symptoms-and-diagnosis/symptoms/tips-for-communicating-dementia",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          },
+          {
+            "org": "NHS",
+            "title": "Dementia",
+            "url": "https://www.nhs.uk/conditions/dementia/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "parkinsons-disease",
+      "wikidata": "Q11085",
+      "name": {
+        "en": "Parkinson's disease",
+        "ta": "நடுக்குவாதம்"
+      },
+      "aliases": {
+        "en": [
+          "paralysis agitans",
+          "parkinsonismus idiopathicus",
+          "Parkinson disease"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Give me time. Moving and speaking can be slow, and I may freeze for a moment.",
+            "Help me take my medicines on time. The timing matters."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Pull me by the arm. Let me set the pace."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Parkinson's disease",
+            "url": "https://www.nhs.uk/conditions/parkinsons-disease/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "multiple-sclerosis",
+      "wikidata": "Q8277",
+      "name": {
+        "en": "Multiple sclerosis",
+        "ta": "தண்டுவட மரப்பு நோய்"
+      },
+      "aliases": {
+        "en": [
+          "MS",
+          "encephalomyelitis disseminata",
+          "insular sclerosis",
+          "disseminated sclerosis",
+          "generalized multiple sclerosis"
+        ],
+        "ta": []
+      }
+    },
+    {
+      "id": "autism",
+      "wikidata": "Q38404",
+      "name": {
+        "en": "Autism",
+        "ta": "மதியிறுக்கம்"
+      },
+      "aliases": {
+        "en": [
+          "Autism spectrum",
+          "autistic disorder",
+          "autistic disorder of childhood onset",
+          "childhood autism",
+          "infantile autism",
+          "early infantile autism",
+          "early childhood autism",
+          "classic autism",
+          "adult autism",
+          "ASD",
+          "autism spectrum disorder"
+        ],
+        "ta": [
+          "மதி இறுக்கம்"
+        ]
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Speak calmly and plainly. Give me time to answer.",
+            "Take me somewhere quiet if you can.",
+            "Call my emergency contact."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Touch or restrain me unless I'm in danger.",
+            "Shout."
+          ]
+        },
+        "sources": [
+          {
+            "org": "National Autistic Society",
+            "title": "Meltdowns",
+            "url": "https://www.autism.org.uk/advice-and-guidance/topics/behaviour/meltdowns/all-audiences",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "down-syndrome",
+      "wikidata": "Q47715",
+      "name": {
+        "en": "Down syndrome",
+        "ta": "டெளன் நோய்க்கூட்டறிகுறி"
+      },
+      "aliases": {
+        "en": [
+          "Down's syndrome",
+          "trisomy 21 syndrome",
+          "Complete trisomy 21 syndrome (disorder)",
+          "Complete trisomy 21 syndrome",
+          "Downs syndrome",
+          "trisomy 21",
+          "Down's syndrome - trisomy 21",
+          "G Trisomy"
+        ],
+        "ta": [
+          "டெளன் நோய்க்குறித் தொகுப்பு"
+        ]
+      }
+    },
+    {
+      "id": "schizophrenia",
+      "wikidata": "Q41112",
+      "name": {
+        "en": "Schizophrenia",
+        "ta": "மனப்பித்து"
+      },
+      "aliases": {
+        "en": [
+          "Morel-Kraepelin disease",
+          "Kraepelin-Morel disease",
+          "dementia præcox",
+          "dementia praecox",
+          "schizophrenia-1"
+        ],
+        "ta": [
+          "ஸ்கிசோஃப்ரினியா",
+          "கிசோபிரோனியா"
+        ]
+      }
+    },
+    {
+      "id": "bipolar-disorder",
+      "wikidata": "Q131755",
+      "name": {
+        "en": "Bipolar disorder",
+        "ta": "இருமுனையப் பிறழ்வு"
+      },
+      "aliases": {
+        "en": [
+          "manic depression",
+          "BPAD",
+          "BD",
+          "bipolar illness",
+          "bipolar disease",
+          "bipolar affective disorder"
+        ],
+        "ta": [
+          "இருதுருவக் கோளாறு"
+        ]
+      }
+    },
+    {
+      "id": "addisons-disease",
+      "wikidata": "Q8282",
+      "name": {
+        "en": "Addison's disease",
+        "ta": "அடிசன் நோய்"
+      },
+      "aliases": {
+        "en": [
+          "Adrenal insufficiency",
+          "ADRENOCORTICAL, Little Man Syndrome, CHRONIC PRIMARY CONGENITAL",
+          "Addison disease",
+          "primary adrenocortical insufficiency",
+          "Addison disease, chronic adrenal insufficiency",
+          "ADRENOCORTICAL HYPOFUNCTION, CHRONIC PRIMARY CONGENITAL",
+          "adrenal hypoplasia",
+          "Adrenal aplasia",
+          "Adrenal gland hypofunction",
+          "Addison",
+          "Primary chronic adrenocortical insufficiency",
+          "primary adrenal insufficiency"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "If I'm vomiting, confused, or collapse, this may be an adrenal crisis. Call an ambulance and say Addison's disease.",
+            "I carry an emergency hydrocortisone injection. Help me use it, or give it into my outer thigh."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Wait to see if I improve."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Addison's disease, treatment",
+            "url": "https://www.nhs.uk/conditions/addisons-disease/treatment/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "cystic-fibrosis",
+      "wikidata": "Q178194",
+      "name": {
+        "en": "Cystic fibrosis",
+        "ta": "சிஸ்டிக் ஃபைப்ரோசிஸ்"
+      },
+      "aliases": {
+        "en": [
+          "CF",
+          "mucoviscidosis",
+          "CYSTIC FIBROSIS",
+          "CYSTIC FIBROSIS; CF"
+        ],
+        "ta": []
+      }
+    },
+    {
+      "id": "coeliac-disease",
+      "wikidata": "Q11088",
+      "name": {
+        "en": "Coeliac disease",
+        "ta": "குளூட்டன் ஒவ்வாமை"
+      },
+      "aliases": {
+        "en": [
+          "Celiac disease",
+          "nontropical sprue",
+          "endemic sprue",
+          "gluten enteropathy",
+          "idiopathic steatorrhea",
+          "CeD",
+          "coeliac disease",
+          "celiac sprue"
+        ],
+        "ta": []
+      }
+    },
+    {
+      "id": "anticoagulant-therapy",
+      "wikidata": null,
+      "name": {
+        "en": "Taking blood thinners",
+        "ta": "இரத்தம் உறைதல் தடுப்பு மருந்து"
+      },
+      "aliases": {
+        "en": [
+          "Anticoagulants",
+          "Warfarin",
+          "Blood thinners"
+        ],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Press hard on any bleeding for at least 10 minutes.",
+            "Call an ambulance for a head injury or bleeding that won't stop, even if I seem fine.",
+            "Tell medics I take blood thinners."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Give me aspirin or ibuprofen."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Anticoagulants, side effects",
+            "url": "https://www.nhs.uk/conditions/anticoagulants/side-effects/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "pacemaker",
+      "wikidata": null,
+      "name": {
+        "en": "Pacemaker fitted",
+        "ta": "இதயத் துடிப்பு சீராக்கி பொருத்தப்பட்டுள்ளது"
+      },
+      "aliases": {
+        "en": [],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Tell medics I have a pacemaker."
+          ]
+        },
+        "doNot": {
+          "en": null
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Pacemaker implantation",
+            "url": "https://www.nhs.uk/conditions/pacemaker-implantation/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    },
+    {
+      "id": "organ-transplant",
+      "wikidata": null,
+      "name": {
+        "en": "Organ transplant recipient",
+        "ta": "உறுப்பு மாற்று அறுவை சிகிச்சை பெற்றவர்"
+      },
+      "aliases": {
+        "en": [],
+        "ta": []
+      }
+    },
+    {
+      "id": "hearing-impaired",
+      "wikidata": null,
+      "name": {
+        "en": "Deaf or hard of hearing",
+        "ta": "காது கேளாமை"
+      },
+      "aliases": {
+        "en": [],
+        "ta": []
+      }
+    },
+    {
+      "id": "dialysis",
+      "wikidata": null,
+      "name": {
+        "en": "On dialysis",
+        "ta": "டயாலிசிஸ் சிகிச்சையில்"
+      },
+      "aliases": {
+        "en": [],
+        "ta": []
+      },
+      "prefill": {
+        "do": {
+          "en": [
+            "Tell medics I'm on dialysis.",
+            "Use my other arm for blood pressure or needles. My dialysis arm has a fistula."
+          ]
+        },
+        "doNot": {
+          "en": [
+            "Take blood pressure or put needles in my fistula arm."
+          ]
+        },
+        "sources": [
+          {
+            "org": "NHS",
+            "title": "Dialysis, side effects",
+            "url": "https://www.nhs.uk/conditions/dialysis/side-effects/",
+            "reviewedOn": "2026-09-14T00:00:00.000Z"
+          }
+        ]
+      },
+      "reviewedBy": "Drafted with AI from the sources listed. Not yet reviewed by a clinician."
+    }
+  ]
+}

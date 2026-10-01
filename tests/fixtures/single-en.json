@@ -1,0 +1,121 @@
+{
+  "version": 2,
+  "format": "id1-landscape",
+  "mode": "single",
+  "language": "en",
+  "secondLanguage": "ta",
+  "emblem": "red-cross",
+  "person": {
+    "name": {
+      "en": "Sara Kumar"
+    },
+    "birthYear": "1958",
+    "bloodGroup": "B+",
+    "address": {
+      "en": ""
+    },
+    "showAddress": false
+  },
+  "conditions": [
+    {
+      "id": "type-1-diabetes",
+      "name": {
+        "en": "Type 1 Diabetes"
+      },
+      "primary": true,
+      "icon": {
+        "kind": "generic"
+      }
+    },
+    {
+      "id": null,
+      "name": {
+        "en": "High blood pressure"
+      },
+      "primary": false,
+      "icon": {
+        "kind": "generic"
+      }
+    }
+  ],
+  "do": {
+    "en": "If I am confused or shaky, give me sugar or juice.\nIf I cannot swallow, call an ambulance."
+  },
+  "doNot": {
+    "en": "Give me insulin.\nGive food or drink if I cannot swallow.\nLeave me alone."
+  },
+  "carries": {
+    "en": "Glucose tablets and an insulin pen, left jacket pocket."
+  },
+  "medications": [
+    {
+      "name": {
+        "en": "Insulin glargine"
+      },
+      "dose": "20 units",
+      "frequency": {
+        "en": "at night"
+      }
+    },
+    {
+      "name": {
+        "en": "Insulin aspart"
+      },
+      "dose": "4 to 8 units",
+      "frequency": {
+        "en": "with meals"
+      }
+    },
+    {
+      "name": {
+        "en": "Metformin"
+      },
+      "dose": "500 mg",
+      "frequency": {
+        "en": "twice daily"
+      }
+    }
+  ],
+  "allergies": {
+    "en": "Penicillin"
+  },
+  "contacts": [
+    {
+      "name": {
+        "en": "Ravi Kumar"
+      },
+      "relationship": {
+        "en": "son"
+      },
+      "phone": "+44 7700 900123"
+    },
+    {
+      "name": {
+        "en": "Meena Kumar"
+      },
+      "relationship": {
+        "en": "daughter"
+      },
+      "phone": "+44 7700 900456"
+    }
+  ],
+  "hospital": {
+    "en": "Apollo Hospital, Chennai"
+  },
+  "otherConditions": {
+    "en": ""
+  },
+  "emergency": {
+    "country": "IN"
+  },
+  "qr": {
+    "on": false,
+    "size": 14,
+    "include": {
+      "condition": true,
+      "blood": false,
+      "hospital": false,
+      "address": false
+    }
+  }
+}
